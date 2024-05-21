@@ -83,7 +83,7 @@ To get started, navigate to the desired module folder to access its contents. Wh
 
 ## Contributing
 
-We welcome contributions from the community to enhance and improve the content of this repository. Whether you have suggestions for new topics, corrections to existing materials, or additional resources to share, your contributions are valuable and appreciated. Please refer to the CONTRIBUTING.md file for guidelines on how to contribute.
+We welcome contributions from the community to enhance and improve the content of this repository. Whether you have suggestions for new topics, corrections to existing materials, or additional resources to share, your contributions are valuable and appreciated. Please refer to the `CONTRIBUTING.md` file for guidelines on how to contribute.
 
 ## Feedback and Support
 
