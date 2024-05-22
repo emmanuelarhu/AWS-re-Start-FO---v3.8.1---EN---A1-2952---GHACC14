@@ -1,0 +1,10 @@
+<ERROR:INVALID_SESSION> Please login again<form id="response" action="../home/login.php" method="post">
+<input type="hidden" name="msg" value="mL0tBlGKYi/ZejBvbFGSP3EjTmMeSYdYx20qEmNWvzpqpSgh0Gjie0KJ0WPBt84fttQwMU1Q+EnBNCOD93IggNUGz2uD+jEq2bt3M6KLjJo99KkBRSwJdDwQxmGJ8dt+sad5qlqIj3T+j1SJQYX2dXSMiUqlLsNDO2pQ2Z7KQRg=">
+<input type="hidden" name="style" value="warning">
+
+</form>
+<script type="text/javascript">
+    window.onload = function(){
+        document.forms["response"].submit();
+    }
+</script>

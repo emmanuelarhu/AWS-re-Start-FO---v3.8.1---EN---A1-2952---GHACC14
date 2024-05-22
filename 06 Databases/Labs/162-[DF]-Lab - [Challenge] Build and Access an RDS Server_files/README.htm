@@ -1,0 +1,270 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body><header>
+    <link rel="stylesheet" href="README_data/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="README_data/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="README_data/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="README_data/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ </header>
+ <!--include:Logo-->
+<style type="text/css">
+    body {
+    font-family:  "Roboto", "Helvetica", sans-serif;
+    font-size: 12pt;
+    font-color: Gray;
+    line-height: 1.6;
+    margin: 50px;
+    }
+    p {
+    list-style-position: inside;
+    }
+    #ssb_blue {
+    background-color: #257ACF;
+    font-weight: bold;
+    font-size: 90%;
+    color: white;
+    border-radius: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
+    }
+    #ssb_s3_blue {
+    background-color: #329ad6;
+    font-weight: bold;
+    font-size: 90%;
+    color: white;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    }
+    #ssb_voc_grey {
+    background-color: #F2F3F4;
+    font-weight: normal;
+    font-size: 90%;
+    color: black;
+    border-radius: 3px;
+    border: 1px solid gray;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+    white-space: nowrap;
+    }
+    #ssb_grey {
+    background-color: #DEDEDE;
+    font-weight: bold;
+    font-size: 90%;
+    color: #444;
+    position: relative;
+    top:-1px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #444;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
+    }
+    #ssl_alexa_ocean {
+    color: #00a0d2;
+    font-weight: bold;
+    }
+    #ssb_services {
+    background-color: #232f3e;
+    font-weight: bold;
+    font-size: 90%;
+    color: white;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    }
+    #ssb_orange {
+    background-color:#ec7211;
+    font-weight:bold;
+    font-size:90%;
+    color:white;
+    padding-top:3px;
+    padding-bottom:3px;
+    padding-left:10px;
+    padding-right:10px;
+    white-space:
+    nowrap;
+    }
+    #ssbox_cloudformation_blue {
+    font-weight:bold;
+    background-color:#f1faff;
+    font-size:90%;
+    border-color:#00A1C9;
+    border-width:1px;
+    border-style:solid;
+    padding-top:3px;
+    padding-bottom:3px;
+    padding-left:10px;
+    padding-right:10px;
+    }
+    #ssb_ssm_white {
+    background-color:white;
+    font-weight:bold;
+    font-size:90%;
+    color:#545b64;
+    border-color:#545b64;
+    border-radius:2px;
+    border-width:1px;
+    border-style:solid;
+    padding-top:3px;
+    padding-bottom:3px;
+    padding-left:10px;
+    padding-right:10px;
+    }
+ </style>
+<h2>Challenge Lab: Build Your DB Server and Interact With Your DB</h2>
+<p>&nbsp;&nbsp;</p>
+<p>This lab is designed to reinforce the concept of leveraging an 
+AWS-managed database instance for solving relational database needs.</p>
+<p><strong><em>Amazon Relational Database Service</em></strong> (Amazon 
+RDS) makes it easy to set up, operate, and scale a relational database 
+in the cloud. It provides cost-efficient and resizable capacity while 
+managing time-consuming database administration tasks, which allows you 
+to focus on your applications and business. Amazon RDS provides you with
+ six familiar database engines to choose from: Amazon Aurora, Oracle, 
+Microsoft SQL Server, PostgreSQL, MySQL and MariaDB.</p>
+<p>&nbsp;</p>
+<p><strong>After completing this lab, you will be able to:</strong></p>
+<ul>
+<li>Create an RDS instance</li>
+<li>Use the Amazon RDS Query Editor to query data. </li>
+</ul>
+<p><strong>Duration</strong></p>
+<p>This lab takes approximately <strong>45 minutes</strong>.</p>
+<hr>
+<h3>Accessing the AWS Management Console</h3>
+<ol>
+<li>
+<p>At the top of these instructions, click <span id="ssb_voc_grey">Start Lab</span> to launch your lab.</p>
+<p>A Start Lab panel opens displaying the lab status.</p>
+</li>
+<li>
+<p>Wait until you see the message "<strong>Lab status: ready</strong>", then click the <strong>X</strong> to close the Start Lab panel.</p>
+</li>
+<li>
+<p>At the top of these instructions, click <span id="ssb_voc_grey">AWS</span></p>
+<p>This will open the AWS Management Console in a new browser tab. The system will automatically log you in.</p>
+<p><i class="fa fa-dot-circle-o" aria-hidden="true"></i> <b>Tip</b> : If
+ a new browser tab does not open, there will typically be a banner or 
+icon at the top of your browser indicating that your browser is 
+preventing the site from opening pop-up windows. Click on the banner or 
+icon and choose "Allow pop ups."</p>
+</li>
+<li>
+<p>Arrange the AWS Management Console tab so that it displays along side
+ these instructions. Ideally, you will be able to see both browser tabs 
+at the same time, to make it easier to follow the lab steps.
+&nbsp;
+&nbsp;</p>
+</li>
+</ol>
+<hr>
+<h3>Your Challenge</h3>
+<p>To finish the Challenge do the following: </p>
+<ol start="5">
+<li>
+<p>Launch an Amazon RDS DB instance using either Amazon Aurora 
+Provisioned DB or MySQL database engines. Make a note of the DB 
+credentials, as it will be needed in next steps.
+Please note the following lab restrictions:</p>
+<ul>
+<li><strong>DatabaseEngine</strong>: Supported engines are Amazon Aurora or MySQL. Amazon Aurora serverless is not available.</li>
+<li><strong>Template</strong>: Choose Dev/Test or Free tier.</li>
+<li><strong>Availability and durability</strong>: Avoid creating a standby instance.</li>
+<li><strong>DB instance size</strong>: Choose Burstable classes - db.t3 instances of type db. t*.micro to db.t*.medium.</li>
+<li><strong>Storage</strong>: Choose General Purpose SSD (gp2) of a size up to 100 GB. Provisioned IOPS access is restricted.</li>
+<li><strong>Amazon VPC</strong>: Use the <em>Lab VPC</em></li>
+<li><strong>Security Group</strong>: Include a security group that will allow the LinuxServer to connect to the RDS instance.</li>
+<li>For MySQL, under <strong>Additional configuration</strong> - <strong>Enable Enhanced monitoring</strong> -  Disable the option</li>
+<li><strong>Purchasing Options</strong>: On-Demand instances are allowed. Other purchasing options are disabled.</li>
+</ul>
+</li>
+<li>
+<p>Click the <span id="ssb_voc_grey">Details <i class="fas fa-caret-down"></i></span> followed by <span id="ssb_voc_grey">Show</span>. </p>
+</li>
+<li>
+<p>Click <span id="ssb_voc_grey">Download PEM</span> (for Linux or macOS) or <span id="ssb_voc_grey">Download PPK</span> (for Windows) depending on your local operating system. </p>
+</li>
+<li>
+<p>Make a note of the <strong>LinuxServer</strong> address.</p>
+</li>
+<li>
+<p>Connect (SSH) to the <strong>LinuxServer</strong> using the details you made a note of.</p>
+</li>
+<li>
+<p>Install a MySQL client, and use it to connect to your db. Some helpful information is available <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ConnectToInstance.html">here</a></p>
+</li>
+<li>
+<p>Create a table RESTART with the following columns – <strong>Capture screenshot for submission</strong><br></p>
+<ul>
+<li>Student ID (Number),</li>
+<li>Student Name,</li>
+<li>Restart City,</li>
+<li>Graduation Date (Date Time)
+<br></li>
+</ul>
+</li>
+<li>
+<p>Insert 10 sample rows into this table – <strong>Capture screenshot for submission</strong></p>
+</li>
+<li>
+<p>Select all rows from this table – <strong>Capture screenshot for submission</strong></p>
+</li>
+<li>
+<p>Create a table CLOUD_PRACTITIONER with the following columns – <strong>Capture screenshot for submission</strong><br></p>
+<ul>
+<li>Student ID (Number)</li>
+<li>certification date (Date Time)</li>
+</ul>
+</li>
+<li>
+<p>Insert 5 sample rows into this table – <strong>Capture screenshot for submission</strong></p>
+</li>
+<li>
+<p>Select all rows from this table – <strong>Capture screenshot for submission</strong></p>
+</li>
+<li>
+<p>Perform an inner join between the 2 tables created above and display <strong>student
+ID, Student Name, Certification Date</strong> – <strong>Capture screenshot for submission</strong>
+&nbsp;
+&nbsp;</p>
+</li>
+</ol>
+<h2>Lab Complete</h2>
+<p><i class="fa fa-flag-checkered fa-lg" aria-hidden="true"></i>Congratulations! You have completed the activity.
+&nbsp; When you are finished with the lab:</p>
+<ol start="18">
+<li>
+<p>Click <span id="ssb_voc_grey">End Lab</span> at the top of this page and then click <span id="ssb_blue">Yes</span> to confirm that you want to end the activity.</p>
+</li>
+<li>
+<p>A panel will appear, indicating that "DELETE has been initiated... You may close this message box now."</p>
+</li>
+<li>
+<p>Click the <strong>X</strong> in the top right corner to close the panel.
+&nbsp;
+&nbsp;</p>
+</li>
+</ol>
+<h2>Additional Resources</h2>
+<p>For more information about AWS Training and Certification, see <a href="https://aws.amazon.com/training/">https://aws.amazon.com/training/</a>.</p>
+<p><em>Your feedback is welcome and appreciated.</em></p>
+<p>If you would like to share any suggestions or corrections, please provide the details in our <a href="https://support.aws.amazon.com/#/contacts/aws-training">AWS Training and Certification Contact Form</a>.</p>
+<p><em>© 2022 Amazon Web Services, Inc. and its affiliates. All rights 
+reserved. This work may not be reproduced or redistributed, in whole or 
+in part, without prior written permission from Amazon Web Services, Inc.
+ Commercial copying, lending, or selling is prohibited.</em></p><script defer="defer" src="vedd3670a3b1c4e178fdfb0cc912d969e1713874337387" integrity="sha512-EzCudv2gYygrCcVhu65FkAxclf3mYM6BCwiGUm6BEuLzSb5ulVhgokzCZED7yMIkzYVg65mxfIBNdNra5ZFNyQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;88552f5f5efe7773&quot;,&quot;version&quot;:&quot;2024.4.1&quot;,&quot;token&quot;:&quot;a73834a4a1444e9ab89e8da06da41720&quot;}" crossorigin="anonymous"></script>
+</body></html>

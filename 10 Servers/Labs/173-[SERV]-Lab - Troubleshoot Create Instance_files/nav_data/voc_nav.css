@@ -1,0 +1,171 @@
+:root {
+    --voc-blue: #008FBE;
+    --voc-red: #d65f64;
+    /* --voc-red: #be2f00; */
+}
+
+
+.form-select,
+.form-control {
+    /* nicer text "cutoff" in boxes than slicing off text */
+    text-overflow: ellipsis;
+}
+
+.fi {
+    /* align fontawesome icons with text */
+    vertical-align: middle;
+}
+
+.navbar {
+    /* height: 3rem; */
+}
+
+.voc-navbar {
+    font-size: 13px;
+    /* height: 3rem; */
+    background-color: #394b58;
+
+}
+
+.voc-navbar-color {
+    background-color: #394b58;
+}
+
+.nav-link {
+    color: black
+}
+
+.toast-container {
+    /* place popup notifications above all page content.
+    highest z-index in bootstrap5 defaults is 1080 */
+    z-index: 2000;
+}
+
+.dropdown-menu {
+    max-height: 83vh;
+    overflow-y: auto;
+}
+
+
+/* ########################### */
+/* SECTION: MODIFIED BOOTSTRAP5 DEFAULTS */
+/* ########################### */
+
+.form-check-input:checked {
+    /* vocareum blue on toggle switches */
+    background-color: var(--voc-blue);
+}
+
+
+/* ########################### */
+/* VOCAREUM BLUE PRIMARY BUTTON */
+/* ########################### */
+
+.btn-primary {
+    /* official vocareum blue styling */
+    background-color: var(--voc-blue);
+    border-color: var(--voc-blue);
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+    /* slightly darker than official vocareum blue */
+    background-color: #0081ab;
+    border-color: #0081ab;
+}
+
+.btn-outline-primary {
+    /* official vocareum blue styling */
+    color: var(--voc-blue);
+    border-color: var(--voc-blue);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:active {
+    /* official vocareum blue styling */
+    border-color: var(--voc-blue);
+    background-color: var(--voc-blue);
+}
+
+.voc-color-text {
+    color: var(--voc-blue);
+}
+
+
+/* ########################### */
+/* VOCAREUM RED DANGER BUTTON */
+/* ########################### */
+
+.btn-danger {
+    background-color: var(--voc-red);
+    border-color: var(--voc-red);
+}
+
+.btn-danger:hover,
+.btn-danger:active {
+    background-color: #be2f00;
+    border-color: #be2f00;
+}
+
+.btn-outline-danger {
+    color: var(--voc-red);
+    border-color: var(--voc-red);
+}
+
+.btn-outline-danger:hover,
+.btn-outline-danger:active {
+    border-color: var(--voc-red);
+    background-color: var(--voc-red);
+}
+
+
+
+/* ########################### */
+/* SECTION SIDEBAR STYLING */
+/* ########################### */
+
+.voc-sidebar {
+    background-color: #f9f9f9;
+    min-width: 15rem;
+    max-width: 20rem;
+}
+
+.voc-sidebar-link {
+    color: black;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 0.75rem;
+    /* text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap; */
+}
+
+.voc-sidebar-link.active {
+    /* voc blue select indicator with white text for contrast */
+    background-color: var(--voc-blue);
+    color: white;
+    transition: all .15s ease-in-out;
+    transform: scale(1.05);
+}
+
+.voc-sidebar-link:hover {
+    color: black;
+    background-color: #c7e6f0;
+    transition: all .15s ease-in-out;
+    transform: scale(1.05);
+}
+
+
+/* ########################### */
+/* SECTION: FUNCTIONALITY */
+/* ########################### */
+
+.kebab:before {
+    /* Vertical 3 dots menu for multi-option buttons */
+    content: '\2807';
+}
+
+.sidebar-items-sticky {
+    top: 3.5rem;
+    position: sticky;
+}

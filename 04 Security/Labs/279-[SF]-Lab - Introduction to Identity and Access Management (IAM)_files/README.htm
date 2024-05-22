@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width initial-scale=1">
+
+<link href="README_data/all_002.css" rel="stylesheet" type="text/css"><style type="text/css">html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit; background-repeat: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit; background-repeat: inherit; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print { 
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) { 
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) { 
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+/*
+Version: v1.4
+1. Updated colour to be more accessible.
+2. Included FontAwesome link directly in the css.
+3. Imported Buttons CSS.
+4. Updated font to Amazon Ember.
+*/
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #333333;
+}
+
+/* Importing Font Awesome */
+@import url("file:///Users/chandyk/Library/Application%20Support/abnerworks.Typora/themes/");
+
+/* @include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext); /*
+
+
+/* Adding button support */
+#ssb_alexa_blue {
+background-color: #3366ff;
+font-weight: bold;
+font-size: 90%;
+color: white;
+position: relative;
+top: -1px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+border-color: #3366ff;
+border-radius: 2px;
+white-space: nowrap
+}
+#ssb_alexa_ocean {
+background-color: #00a0d2;
+font-weight: bold;
+font-size: 90%;
+color: white;
+position: relative;
+top: -1px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+border-color: #00a0d2;
+white-space: nowrap
+}
+#ssb_alexa_sand {
+background-color: #f2f2f2;
+font-weight: bold;
+font-size: 90%;
+color: #00a0d2;
+position: relative;
+top: -1px;
+border-color: #dcdcdc;
+border-style: solid;
+border-width: 2px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+white-space: nowrap
+}
+#ssb_alexa_white {
+background-color: white;
+font-weight: bold;
+font-size: 90%;
+color: #00a0d2;
+position: relative;
+top: -1px;
+border-color: #00a0d2;
+border-style: solid;
+border-width: 2px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+white-space: nowrap
+}
+#ssb_blue {
+background-color: #257ACF;
+font-weight: bold;
+font-size: 90%;
+color: white;
+position: relative;
+top: -1px;
+border-radius: 5px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+white-space: nowrap
+}
+#ssb_catalog_orange {
+background-color: #E36000;
+font-weight: bold;
+font-size: 90%;
+color: white;
+position: relative;
+top: -1px;
+border-radius: 1px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+white-space: nowrap
+}
+#ssb_catalog_red {
+background-color: #D90000;
+font-weight: bold;
+font-size: 90%;
+color: white;
+position: relative;
+top: -1px;
+border-radius: 5px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+white-space: nowrap
+}
+#ssb_dark_blue {
+color: white;
+background-color: darkblue;
+border-radius: 3px;
+padding: 0px 6px;
+white-space: nowrap
+}
+#ssb_grafana_blue {
+background-color: #00678b;
+font-weight: bold;
+font-size: 90%;
+color: white;
+position: relative;
+top: -1px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+border-color: #00678b;
+border-radius: 2px;
+white-space: nowrap
+}
+#ssb_grafana_green {
+background-color: #629300;
+font-weight: bold;
+font-size: 90%;
+color: white;
+position: relative;
+top: -1px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+border-color: #629300;
+border-radius: 2px;
+white-space: nowrap
+}
+#ssb_grafana_orange {
+background-color: #ec8427;
+font-weight: bold;
+font-size: 90%;
+color: white;
+position: relative;
+top: -1px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+border-color: #ec8427;
+border-radius: 2px;
+white-space: nowrap
+}
+#ssb_grey {
+background-color: #DEDEDE;
+font-weight: bold;
+font-size: 90%;
+color: #444;
+position: relative;
+top: -1px;
+border-radius: 5px;
+border-width: 1px;
+border-style: solid;
+border-color: #444;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+white-space: nowrap
+}
+#ssb_grey_square {
+background-color: #DEDEDE;
+font-weight: bold;
+font-size: 90%;
+color: #444;
+position: relative;
+top: -1px;
+border-radius: 1px;
+border-width: 1px;
+border-style: solid;
+border-color: #444;
+padding-top: 2px;
+padding-bottom: 2px;
+padding-left: 10px;
+padding-right: 10px;
+white-space: nowrap
+}
+#ssb_iot_blue {
+background-color: #00A1C9;
+font-weight: bold;
+font-size: 90%;
+color: white;
+position: relative;
+top: -1px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+border-color: #00A1C9;
+border-radius: 2px;
+white-space: nowrap
+}
+#ssb_iot_grey {
+background-color: white;
+font-weight: bold;
+font-size: 90%;
+color: gray;
+position: relative;
+top: -1px;
+border-color: gray;
+border-radius: 2px;
+border-style: solid;
+border-width: 1px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+white-space: nowrap
+}
+#ssb_iot_white {
+background-color: white;
+font-weight: bold;
+font-size: 90%;
+color: #00A1C9;
+position: relative;
+top: -1px;
+border-color: #00A1C9;
+border-radius: 2px;
+border-style: solid;
+border-width: 1px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+white-space: nowrap
+}
+#ssb_kibana_blue {
+background-color: #0079a5;
+font-weight: bold;
+font-size: 90%;
+color: white;
+position: relative;
+top: -1px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+border-color: #0079a5;
+border-radius: 2px;
+white-space: nowrap
+}
+#ssb_kibana_white {
+background-color: white;
+font-weight: bold;
+font-size: 90%;
+color: #0079a5;
+position: relative;
+top: -1px;
+border-color: #0079a5;
+border-radius: 2px;
+border-width: 1px;
+border-style: solid;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+white-space: nowrap
+}
+#ssb_lambda_orange {
+background-color: #ec7211;
+font-weight: bold;
+font-size: 90%;
+color: white;
+position: relative;
+top: -1px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+white-space: nowrap
+}
+#ssb_lambda_white {
+background-color: white;
+font-weight: bold;
+font-size: 90%;
+color: #545b64;
+position: relative;
+top: -1px;
+border-color: #545b64;
+border-radius: 2px;
+border-width: 1px;
+border-style: solid;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+white-space: nowrap
+}
+#ssb_maroon {
+color: white;
+background-color: darkred;
+border-radius: 3px;
+padding: 0px 6px;
+white-space: nowrap
+}
+#ssb_orange {
+background-color: #ec7211;
+font-weight: bold;
+font-size: 90%;
+color: white;
+position: relative;
+top: -1px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+white-space: nowrap
+}
+#ssl_orange {
+color: #ec7211;
+font-weight: bold
+}
+#ssb_orange_oval {
+background-color: #ec7211;
+font-weight: bold;
+font-size: 90%;
+color: white;
+position: relative;
+top: -1px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+border-radius: 20px;
+white-space: nowrap
+}
+#ssb_oval {
+background-color: #DEDEDE;
+font-weight: bold;
+font-size: 90%;
+color: #444;
+position: relative;
+top: -1px;
+border-radius: 20px;
+border-width: 1px;
+border-style: solid;
+border-color: #444;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+}
+#ssb_start_lab {
+background-color: #34A853;
+font-weight: bold;
+font-size: 90%;
+color: white;
+border-radius: 2px;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 3px;
+padding-bottom: 3px
+}
+#ssb_open_console {
+background-color: white;
+font-family: Google Sans;
+font-weight: bold;
+font-size: 90%;
+color: #1a73e8;
+border-color: #dadce0;
+border-radius: 4px;
+border-width: 2px;
+border-style: solid;
+outline-color: #ffffff;
+padding-top: 5px;
+padding-bottom: 5px;
+padding-left: 10px;
+padding-right: 10px
+}
+#ssb_rds_white {
+background-color: white;
+font-weight: bold;
+font-size: 90%;
+color: #545b64;
+position: relative;
+top: -1px;
+border-color: #545b64;
+border-radius: 2px;
+border-width: 1px;
+border-style: solid;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+}
+#ssb_red {
+background-color: #D93025;
+font-weight: bold;
+font-size: 90%;
+color: white;
+border-radius: 2px;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 3px;
+padding-bottom: 3px
+}
+#ssb_red_oval {
+background-color: #D93025;
+font-weight: bold;
+font-size: 90%;
+color: white;
+position: relative;
+top: -1px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+border-radius: 20px;
+white-space: nowrap
+}
+#ssb_s3_blue {
+background-color: #329AD6;
+font-weight: bold;
+font-size: 90%;
+color: white;
+position: relative;
+top: -1px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+}
+#ssb_s3_white {
+background-color: white;
+font-weight: bold;
+font-size: 90%;
+color: #329AD6;
+position: relative;
+top: -1px;
+border-color: #329AD6;
+border-width: 1px;
+border-style: solid;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+}
+#ssb_services {
+background-color: #232f3e;
+font-weight: bold;
+font-size: 90%;
+color: white;
+position: relative;
+top: -1px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+}
+#ssb_square_lex {
+background-color: white;
+font-weight: bold;
+font-size: 90%;
+color: #1166bb;
+position: relative;
+top: -1px;
+border-color: #c4cbcd;
+border-style: solid;
+border-width: 2px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px
+}
+#ssb_ssm_white {
+background-color: white;
+font-weight: bold;
+font-size: 90%;
+color: #545b64;
+position: relative;
+top: -1px;
+border-color: #545b64;
+border-radius: 2px;
+border-width: 1px;
+border-style: solid;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+}
+#ssb_white {
+background-color: white;
+font-weight: bold;
+font-size: 90%;
+color: #545b64;
+position: relative;
+top: -1px;
+border-color: #545b64;
+border-radius: 2px;
+border-width: 1px;
+border-style: solid;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+}
+#ssbox_cloudformation_blue {
+font-weight: bold;
+background-color: #f1faff;
+font-size: 90%;
+border-color: #00A1C9;
+border-width: 1px;
+border-style: solid;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+}
+#ssl_alexa_ocean {
+color: #00a0d2;
+font-weight: bold
+}
+#ssl_blue {
+color: #1166bb;
+font-weight: bold
+}
+#ssl_catalog_orange {
+color: #E16706;
+font-weight: bold
+}
+#ssb_codestar_blue {
+background-color: #329AD6;
+font-weight: bold;
+font-size: 80%;
+color: white;
+position: relative;
+top: -1px;
+border-radius: 1px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+white-space: nowrap
+}
+#ssb_cognito_blue {
+background-color: #2a7fd4;
+font-weight: bold;
+font-size: 90%;
+color: white;
+position: relative;
+top: -1px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+border-color: #0055aa;
+border-radius: 2px;
+white-space: nowrap
+}
+#ssb_eb_blue {
+background-color: #0f6dca;
+font-weight: bold;
+font-size: 90%;
+color: white;
+position: relative;
+top: -1px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+border-color: #0055aa;
+border-width: 1px;
+border-style: solid;
+border-radius: 4px;
+white-space: nowrap;
+}
+#ssb_eb_grey {
+background-color: #e5e5e5;
+font-weight: bold;
+font-size: 90%;
+color: 444444;
+position: relative;
+top: -1px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+border-color: #bbbbbb;
+border-width: 1px;
+border-style: solid;
+border-radius: 4px;
+white-space: nowrap
+}
+#ssb_voc_grey {
+background-color: #F2F3F4;
+font-size: 90%;
+color: black;
+position: relative;
+top: -1px;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 10px;
+padding-right: 10px;
+border-color: grey;
+border-width: 1px;
+border-style: solid;
+white-space: nowrap
+}
+
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Amazon Ember", "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #0071bc;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #5b616b;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #5b616b; /*#777777*/
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #323a45;  /*#777777*/
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #323a45; /*a7a7a7*/
+    opacity: 1;
+}
+
+.md-toc {
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #ffffff;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #981b1e;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0));
+}
+
+
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title>README</title>
+<!-- START Inserted by CORE -->
+<style type="text/css">
+   #ssb_alexa_blue {
+   background-color: #3366ff;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #3366ff;
+   border-radius: 2px;
+   white-space: nowrap
+   }
+   #ssb_alexa_ocean {
+   background-color: #00a0d2;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #00a0d2;
+   white-space: nowrap
+   }
+   #ssb_alexa_sand {
+   background-color: #f2f2f2;
+   font-weight: bold;
+   font-size: 90%;
+   color: #00a0d2;
+   position: relative;
+   top: -1px;
+   border-color: #dcdcdc;
+   border-style: solid;
+   border-width: 2px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_alexa_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #00a0d2;
+   position: relative;
+   top: -1px;
+   border-color: #00a0d2;
+   border-style: solid;
+   border-width: 2px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_blue {
+   background-color: #257ACF;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   border-radius: 5px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_catalog_orange {
+   background-color: #E36000;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   border-radius: 1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_catalog_red {
+   background-color: #D90000;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   border-radius: 5px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_dark_blue {
+   color: white;
+   background-color: darkblue;
+   border-radius: 3px;
+   padding: 0px 6px;
+   white-space: nowrap
+   }
+   #ssb_grafana_blue {
+   background-color: #00678b;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #00678b;
+   border-radius: 2px;
+   white-space: nowrap
+   }
+   #ssb_grafana_green {
+   background-color: #629300;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #629300;
+   border-radius: 2px;
+   white-space: nowrap
+   }
+   #ssb_grafana_orange {
+   background-color: #ec8427;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #ec8427;
+   border-radius: 2px;
+   white-space: nowrap
+   }
+   #ssb_grey {
+   background-color: #DEDEDE;
+   font-weight: bold;
+   font-size: 90%;
+   color: #444;
+   position: relative;
+   top: -1px;
+   border-radius: 5px;
+   border-width: 1px;
+   border-style: solid;
+   border-color: #444;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_grey_square {
+   background-color: #DEDEDE;
+   font-weight: bold;
+   font-size: 90%;
+   color: #444;
+   position: relative;
+   top: -1px;
+   border-radius: 1px;
+   border-width: 1px;
+   border-style: solid;
+   border-color: #444;
+   padding-top: 2px;
+   padding-bottom: 2px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_iot_blue {
+   background-color: #00A1C9;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #00A1C9;
+   border-radius: 2px;
+   white-space: nowrap
+   }
+   #ssb_iot_grey {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: gray;
+   position: relative;
+   top: -1px;
+   border-color: gray;
+   border-radius: 2px;
+   border-style: solid;
+   border-width: 1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_iot_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #00A1C9;
+   position: relative;
+   top: -1px;
+   border-color: #00A1C9;
+   border-radius: 2px;
+   border-style: solid;
+   border-width: 1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_kibana_blue {
+   background-color: #0079a5;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #0079a5;
+   border-radius: 2px;
+   white-space: nowrap
+   }
+   #ssb_kibana_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #0079a5;
+   position: relative;
+   top: -1px;
+   border-color: #0079a5;
+   border-radius: 2px;
+   border-width: 1px;
+   border-style: solid;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_lambda_orange {
+   background-color: #ec7211;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_lambda_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #545b64;
+   position: relative;
+   top: -1px;
+   border-color: #545b64;
+   border-radius: 2px;
+   border-width: 1px;
+   border-style: solid;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_maroon {
+   color: white;
+   background-color: darkred;
+   border-radius: 3px;
+   padding: 0px 6px;
+   white-space: nowrap
+   }
+   #ssb_orange {
+   background-color: #ec7211;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssl_orange {
+   color: #ec7211;
+   font-weight: bold
+   }
+   #ssb_orange_oval {
+   background-color: #ec7211;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-radius: 20px;
+   white-space: nowrap
+   }
+   #ssb_oval {
+   background-color: #DEDEDE;
+   font-weight: bold;
+   font-size: 90%;
+   color: #444;
+   position: relative;
+   top: -1px;
+   border-radius: 20px;
+   border-width: 1px;
+   border-style: solid;
+   border-color: #444;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssb_start_lab {
+   background-color: #34A853;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   border-radius: 2px;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 3px;
+   padding-bottom: 3px
+   }
+   #ssb_open_console {
+   background-color: white;
+   font-family: Google Sans;
+   font-weight: bold;
+   font-size: 90%;
+   color: #1a73e8;
+   border-color: #dadce0;
+   border-radius: 4px;
+   border-width: 2px;
+   border-style: solid;
+   outline-color: #ffffff;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   padding-left: 10px;
+   padding-right: 10px
+   }
+   #ssb_rds_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #545b64;
+   position: relative;
+   top: -1px;
+   border-color: #545b64;
+   border-radius: 2px;
+   border-width: 1px;
+   border-style: solid;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssb_red {
+   background-color: #D93025;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   border-radius: 2px;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 3px;
+   padding-bottom: 3px
+   }
+   #ssb_red_oval {
+   background-color: #D93025;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-radius: 20px;
+   white-space: nowrap
+   }
+   #ssb_s3_blue {
+   background-color: #329AD6;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssb_s3_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #329AD6;
+   position: relative;
+   top: -1px;
+   border-color: #329AD6;
+   border-width: 1px;
+   border-style: solid;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssb_services {
+   background-color: #232f3e;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssb_square_lex {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #1166bb;
+   position: relative;
+   top: -1px;
+   border-color: #c4cbcd;
+   border-style: solid;
+   border-width: 2px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px
+   }
+   #ssb_ssm_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #545b64;
+   position: relative;
+   top: -1px;
+   border-color: #545b64;
+   border-radius: 2px;
+   border-width: 1px;
+   border-style: solid;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssb_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #545b64;
+   position: relative;
+   top: -1px;
+   border-color: #545b64;
+   border-radius: 2px;
+   border-width: 1px;
+   border-style: solid;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssbox_cloudformation_blue {
+   font-weight: bold;
+   background-color: #f1faff;
+   font-size: 90%;
+   border-color: #00A1C9;
+   border-width: 1px;
+   border-style: solid;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssl_alexa_ocean {
+   color: #00a0d2;
+   font-weight: bold
+   }
+   #ssl_blue {
+   color: #1166bb;
+   font-weight: bold
+   }
+   #ssl_catalog_orange {
+   color: #E16706;
+   font-weight: bold
+   }
+   #ssb_codestar_blue {
+   background-color: #329AD6;
+   font-weight: bold;
+   font-size: 80%;
+   color: white;
+   position: relative;
+   top: -1px;
+   border-radius: 1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_cognito_blue {
+   background-color: #2a7fd4;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #0055aa;
+   border-radius: 2px;
+   white-space: nowrap
+   }
+   #ssb_eb_blue {
+   background-color: #0f6dca;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #0055aa;
+   border-width: 1px;
+   border-style: solid;
+   border-radius: 4px;
+   white-space: nowrap;
+   }
+   #ssb_eb_grey {
+   background-color: #e5e5e5;
+   font-weight: bold;
+   font-size: 90%;
+   color: 444444;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #bbbbbb;
+   border-width: 1px;
+   border-style: solid;
+   border-radius: 4px;
+   white-space: nowrap
+   }
+   #ssb_voc_grey {
+   background-color: #F2F3F4;
+   font-size: 90%;
+   color: black;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: grey;
+   border-width: 1px;
+   border-style: solid;
+   white-space: nowrap
+   }
+   </style>
+<!-- END Inserted by CORE -->
+
+<!-- START Inserted by CORE -->
+<link rel="stylesheet" href="README_data/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<style>
+	.ssb_qwiklab_green{
+		background-color: yellowgreen;
+		font-weight: bold;
+		font-size: 90%;
+		color: white;
+		border-radius: 5px;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		padding-left: 10px;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+	.ssb_blue {
+		background-color: #257ACF;
+		font-weight: bold;
+		font-size: 90%;
+		color: white;
+		border-radius: 5px;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		padding-left: 10px;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+	.ssb_voc_grey {
+		background-color: #F2F3F4;
+		font-weight: normal;
+		font-size: 90%;
+		color: black;
+		border-radius: 3px;
+		border: 1px solid gray;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 6px;
+		padding-right: 6px;
+		white-space: nowrap;
+	}
+	.ssb_grey {
+		background-color: #DEDEDE;
+		font-weight: bold;
+		font-size: 90%;
+		color: #444;
+		position: relative;
+		top:-1px;
+		border-radius: 5px;
+		border-width: 1px;
+		border-style: solid;
+		border-color: #444;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		padding-left: 10px;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+	.ssl_alexa_ocean {
+		color: #00a0d2;
+		font-weight: bold;
+	}
+
+ 	.ssb_services {
+		background-color:#232f3e;
+		font-weight:bold;
+		font-size:90%;
+		color:white;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:10px;
+		padding-right:10px;
+	}
+
+	.ssb_orange {
+		background-color:#ec7211;
+		font-weight:bold;
+		font-size:90%;
+		color:white;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:10px;
+		padding-right:10px;
+		white-space:
+		nowrap;
+	}
+	.ssbox_cloudformation_blue {
+		font-weight:bold;
+		background-color:#f1faff;
+		font-size:90%;
+		border-color:#00A1C9;
+		border-width:1px;
+		border-style:solid;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:10px;
+		padding-right:10px;
+	}
+	.ssb_ssm_white {
+		background-color:white;
+		font-weight:bold;
+		font-size:90%;
+		color:#545b64;
+		border-color:#545b64;
+		border-radius:2px;
+		border-width:1px;
+		border-style:solid;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:10px;
+		padding-right:10px;
+	}
+</style>
+
+<!-- END Inserted by CORE -->
+
+</head>
+<body class="typora-export"><div class="typora-export-content">
+<div id="write" class=""><h1 id="introduction-to-aws-identity-and-access-management-iam"><span>Introduction to AWS Identity and Access Management (IAM)</span></h1><p><span>In many business environments, access involves a single login to a computer or a network of computer systems that provides the user access to all resources on the network. This access includes rights to personal and shared folders on a network server, company intranets, printers, and other network resources and devices. Unauthorized users can quickly exploit these same resources if the access control and associated authentication procedures are not set up properly.</span></p><p><span>In this lab, you will explore users, user groups, and policies in the AWS Identity and Access Management (IAM) service.</span></p><h3 id="objectives"><span>Objectives</span></h3><p><span>After completing this lab, you should be able to:</span></p><ul><li><span>Create and apply an IAM password policy</span></li><li><span>Explore pre-created IAM users and user groups</span></li><li><span>Inspect IAM policies as applied to the pre-created user groups</span></li><li><span>Add users to user groups with specific capabilities active</span></li><li><span>Locate and use the IAM sign-in URL</span></li><li><span>Experiment with the effects of policies on service access</span></li></ul><p><em><span>Here is diagram of the current environment with the listed IAM users and IAM groups.</span></em>
+<img src="README_data/lab-scenario.jpeg" alt="Lab overview" width="600"></p><h2 id="other-aws-services"><span>Other AWS services</span></h2><p><span>  During this lab, you might receive error messages when performing actions beyond the steps in this lab. These messages will not impact your ability to complete the lab.</span></p><p><strong><span>IAM</span></strong></p><p><span>  IAM can be used for the following:</span></p><ul><li><strong><span>Manage IAM users and their access:</span></strong><span> You can create users and assign them individual security credentials (access keys, passwords, and multi-factor authentication devices). You can manage permissions to control which operations a user can perform.</span></li><li><strong><span>Manage IAM roles and their permissions:</span></strong><span> An IAM role is similar to a user in that a role is an AWS identity with permission policies that determine what the identity can and cannot do in Amazon Web Services (AWS). However, instead of being uniquely associated with one person, a role is intended to be assumable by anyone who needs it.</span></li><li><strong><span>Manage federated users and their permissions:</span></strong><span> You can activate identity federation to allow existing users in your enterprise to access the AWS Management Console, to call AWS application programming interfaces (APIs), and to access resources without the need to create an IAM user for each identity.</span></li></ul><p>&nbsp;</p><h2 id="duration"><span>Duration</span></h2><p><span>This lab requires approximately </span><strong><span>60 minutes</span></strong><span> to complete.</span></p><p>&nbsp;</p><h2 id="accessing-the-aws-management-console"><span>Accessing the AWS Management Console</span></h2><ol start=""><li><p><span>At the upper-right corner of these instructions, choose </span><i class="fas fa-caret-right"></i><span> </span><strong><span>Start Lab</span></strong><span> </span></p><p><strong><span>Troubleshooting tip</span></strong><span>: If you get an </span><strong><span>Access Denied</span></strong><span> error, close the error box, and choose </span><i class="fas fa-caret-right"></i><span> </span><strong><span>Start Lab</span></strong><span> again.</span></p></li><li><p><span>The following information indicates the lab status: </span></p><ul><li><span>A red circle next to </span><strong><u><span>AWS </span><i class="fas fa-circle fa-xs" style="color:#ff0000;"></i></u></strong><span> at the upper-left corner of this page indicates that the lab has not been started.</span></li><li><span>A yellow circle next to </span><strong><u><span>AWS </span><i class="fas fa-circle fa-xs" style="color:#fff700;"></i></u></strong><span> at the upper-left corner of this page indicates that the lab is starting.</span></li><li><span>A green circle next to </span><strong><u><span>AWS </span><i class="fas fa-circle fa-xs" style="color:#00ff7f;"></i></u></strong><span> at the upper-left corner of this page indicates that the lab is ready.</span></li></ul><p><span>Wait for the lab to be ready before proceeding.</span></p></li><li><p><span>At the top of these instructions, choose the green circle next to </span><strong><u><span>AWS </span><i class="fas fa-circle fa-xs" style="color:#00ff7f;"></i></u></strong></p><p><span>This option opens the AWS Management Console in a new browser tab. The system automatically sign you in.</span></p><p><strong><span>Tip</span></strong><span>: If a new browser tab does not open, a banner or icon at the top of your browser might indicate that your browser is preventing the site from opening pop-up windows. Choose the banner or icon, and choose </span><strong><span>Allow pop-ups</span></strong><span>.</span></p></li><li><p><span>If you see a dialog prompting you to switch to the new console home, choose </span><strong><span>Switch to the new Console Home</span></strong><span>.</span></p></li><li><p><span>Arrange the AWS Management Console tab so that it displays along side these instructions. Ideally, you should be able to see both browser tabs at the same time so that you can follow the lab steps.</span></p><p><i class="fas fa-exclamation-triangle"></i><span> </span><strong><span>Do not change the lab Region unless specifically instructed to do so</span></strong><span>.</span></p></li></ol><h2 id="task-1-create-an-account-password-policy"><span>Task 1: Create an account password policy</span></h2><p><span>In this task, you create a custom password policy for your AWS account. This policy affects all the users associated with the account.</span></p><ol start="6"><li><p><span>First, note the Region that you are in (for example, </span><strong><span>Oregon</span></strong><span>). The upper-right corner of the console page displays your Region.</span></p></li><li><p><span>In the AWS Management Console, in the search </span><i class="fas fa-search"></i><span> box, enter </span><code>IAM</code><span> and select it.</span></p></li><li><p><span>In the left navigation pane, choose </span><strong><span>Account settings</span></strong><span>.</span></p><p><span>Here you can see the default password policy that is currently in effect. The company that you are working for has much stricter requirements, and you need to update this policy.</span></p></li><li><p><span>Choose </span><strong><span>Change password policy</span></strong><span>.</span></p></li><li><p><span>Under </span><strong><span>Select your account password policy requirements</span></strong><span>, configure the following options:</span></p><ul><li><span>For </span><strong><span>Enforce minimum password length</span></strong><span>, change </span><code>8</code><span> to </span><code>10</code><span> characters.</span></li><li><span>Select every check box except the check box for </span><strong><span>Password expiration requires administrator reset</span></strong><span>.</span></li><li><span>For </span><strong><span>Enable password expiration</span></strong><span>, leave the default option of </span><strong><span>90</span></strong><span> days. </span></li><li><span>For </span><strong><span>Prevent password reuse</span></strong><span>, leave the default option of </span><strong><span>5</span></strong><span> passwords.</span></li></ul></li><li><p><span>Choose </span><strong><span>Save changes</span></strong><span>.</span></p><p><span>These changes take affect at the AWS account level and apply to every user associated with the account.</span></p></li></ol><h3 id="summary-of-task-1"><span>Summary of task 1</span></h3><p><span>In this task, you strengthened the password requirements by creating a custom password policy. The various password options that you selected have now made the passwords that the users create much more difficult to crack.</span></p><p>&nbsp;</p><h2 id="task-2-explore-users-and-user-groups"><span>Task 2: Explore users and user groups</span></h2><p><span>In this task, you explore the users and user groups that have already been created for you in IAM.</span></p><ol start="12"><li><p><span>In the left navigation pane, choose </span><strong><span>Users</span></strong><span>.</span></p><p><span>The following IAM users have been created for you:</span></p><ul><li><span>user-1</span></li><li><span>user-2</span></li><li><span>user-3</span></li></ul></li><li><p><span>Choose </span><strong><span>user-1</span></strong><span>.</span></p><p><span>This option bring you to a </span><strong><span>Summary</span></strong><span> page for </span><strong><span>user-1</span></strong><span>. The </span><strong><span>Permissions</span></strong><span> tab is displayed. </span></p><p><span>Notice that user-1 does not have any permissions.</span></p></li><li><p><span>Choose the </span><strong><span>Groups</span></strong><span> tab.</span></p><p><span>user-1 is also is not a member of any user groups.</span></p><p><i class="fas fa-info-circle"></i><span> A user group consists of several users who need access to the same data. Privileges can be distributed to the entire group of users rather than to each individual. This option is much more efficient when applying permissions and provides greater overall control of access to resources than applying permissions to individuals.</span></p></li><li><p><span>Choose the </span><strong><span>Security credentials</span></strong><span> tab.</span></p><p><span>user-1 is assigned a </span><strong><span>Console password</span></strong><span>.</span></p></li><li><p><span>In the left navigation pane, choose </span><strong><span>User groups</span></strong><span>.</span></p><p><span>The following user groups have already been created for you:</span></p><ul><li><span>EC2-Admin</span></li><li><span>EC2-Support</span></li><li><span>S3-Support</span></li></ul></li><li><p><span>Choose the </span><strong><span>EC2-Support</span></strong><span> group.</span></p><p><span>This option brings you to the </span><strong><span>Summary</span></strong><span> page for the </span><strong><span>EC2-Support</span></strong><span> group.</span></p></li><li><p><span>Choose the </span><strong><span>Permissions</span></strong><span> tab.</span></p><p><span>This group has a managed policy associated with it called </span><strong><span>AmazonEC2ReadOnlyAccess</span></strong><span>. Managed policies are pre-built policies (built either by AWS or by your administrators) that can be attached to IAM users and user groups. When the policy is updated, the changes to the policy are immediately applied to all users and user groups that are attached to the policy.</span></p></li><li><p><span>Next to the </span><strong><span>AmazonEC2ReadOnlyAccess</span></strong><span> policy, select the plus sign to show the policy.</span></p><p><span>A policy defines what actions are allowed or denied for specific AWS resources. This policy grants permission to list and describe information about Amazon Elastic Compute Cloud (EC2), Elastic Load Balancing (ELB), Amazon CloudWatch, and Amazon EC2 Auto Scaling. This ability to view resources but not modify them is ideal for assigning to a support role.</span></p><p><span>The following is the basic structure of the statements in an IAM policy:</span></p><ul><li><strong><span>Effect</span></strong><span> indicates whether to </span><strong><span>Allow</span></strong><span> or </span><strong><span>Deny</span></strong><span> the permissions.</span></li><li><strong><span>Action</span></strong><span> specifies the API calls that can be made against an AWS service (for example, </span><em><span>cloudwatch:ListMetrics</span></em><span>).</span></li><li><strong><span>Resource</span></strong><span> defines the scope of entities covered by the policy rule (for example, a specific Amazon Simple Storage Service [Amazon S3] bucket, EC2 instance, or * which means </span><em><span>any resource</span></em><span>).</span></li></ul></li><li><p><span>In the left navigation pane, choose </span><strong><span>User groups</span></strong><span>.</span></p></li><li><p><span>Choose the </span><strong><span>S3-Support</span></strong><span> group.</span></p></li><li><p><span>Choose the </span><strong><span>Permissions</span></strong><span> tab.</span></p><p><span>The S3-Support group has the </span><strong><span>AmazonS3ReadOnlyAccess</span></strong><span> policy attached.</span></p></li><li><p><span>Next to the </span><strong><span>AmazonS3ReadOnlyAccess</span></strong><span> policy, select the plus sign to show the policy. </span></p><p><span>This policy has permissions to get and list resources in Amazon S3.</span></p></li><li><p><span>In the left navigation pane, choose </span><strong><span>User groups</span></strong><span>.</span></p></li><li><p><span>Choose the </span><strong><span>EC2-Admin</span></strong><span> group.</span></p></li><li><p><span>Choose the </span><strong><span>Permissions</span></strong><span> tab.</span></p><p><span>This group is slightly different from the other two. Instead of a managed policy, it has a </span><strong><span>Customer inline</span></strong><span> policy, which is a policy assigned to only one user or group. Inline policies are typically used to apply permissions for one-off situations.</span></p></li><li><p><span>Next to the </span><strong><span>EC2-Admin-Policy</span></strong><span> policy, select the plus sign to show the policy. </span></p><p><span>This policy grants permission to view (Describe) information about Amazon EC2 and also the ability to start and stop instances.</span></p></li></ol><h3 id="summary-of-task-2-1"><span>Summary of task 2</span></h3><p><span>In this task, you were able to view pre-created users along with the pre-created user groups. You learned about the attached polices to the user groups and what the differences between the user groups and their permissions are.</span></p><ol start="28"><li><p><span>Under </span><strong><span>Actions</span></strong><span>, choose the </span><strong><span>Show Policy</span></strong><span> link.</span></p><p><span>A policy defines what actions are allowed or denied for specific AWS resources. This policy grants permission to list and describe information about Amazon Elastic Compute Cloud (EC2), Elastic Load Balancing (ELB), Amazon CloudWatch, and Amazon EC2 Auto Scaling. This ability to view resources but not modify them is ideal for assigning to a support role.</span></p><p><span>The following is the basic structure of the statements in an IAM policy:</span></p><ul><li><strong><span>Effect</span></strong><span> indicates whether to </span><strong><span>Allow</span></strong><span> or </span><strong><span>Deny</span></strong><span> the permissions.</span></li><li><strong><span>Action</span></strong><span> specifies the API calls that can be made against an AWS service (for example, </span><em><span>cloudwatch:ListMetrics</span></em><span>).</span></li><li><strong><span>Resource</span></strong><span> defines the scope of entities covered by the policy rule (for example, a specific Amazon Simple Storage Service [Amazon S3] bucket, EC2 instance, or * which means </span><em><span>any resource</span></em><span>).</span></li></ul></li><li><p><span>To close the </span><strong><span>Show Policy</span></strong><span> window, choose the </span><i class="fa fa-times"></i></p></li><li><p><span>In the left navigation pane, choose </span><strong><span>User groups</span></strong><span>.</span></p></li><li><p><span>Choose the </span><strong><span>S3-Support</span></strong><span> group.</span></p><p><span>The S3-Support group has the </span><strong><span>AmazonS3ReadOnlyAccess</span></strong><span> policy attached.</span></p></li><li><p><span>From the </span><strong><span>Actions</span></strong><span> menu, choose the </span><strong><span>Show Policy</span></strong><span> link.</span></p><p><span>This policy has permissions to get and list resources in Amazon S3.</span></p></li><li><p><span>To close the </span><strong><span>Show Policy</span></strong><span> window, choose the </span><i class="fa fa-times"></i></p></li><li><p><span>In the left navigation pane, choose </span><strong><span>User groups</span></strong><span>.</span></p></li><li><p><span>Choose the </span><strong><span>EC2-Admin</span></strong><span> group.</span></p><p><span>This group is slightly different from the other two. Instead of a managed policy, it has a </span><strong><span>Customer inline</span></strong><span> policy, which is a policy assigned to only one user or group. Inline policies are typically used to apply permissions for one-off situations.</span></p></li><li><p><span>Under </span><strong><span>Actions</span></strong><span>, choose </span><strong><span>Show Policy</span></strong><span> to view the policy.</span></p><p><span>This policy grants permission to view (Describe) information about Amazon EC2 and also the ability to start and stop instances.</span></p></li><li><p><span>At the bottom of the screen, choose </span><strong><span>Cancel</span></strong><span> to close the policy.</span></p></li></ol><h3 id="summary-of-task-2-2"><span>Summary of task 2</span></h3><p><span>In this task, you were able to view pre-created users along with the pre-created user groups. You learned about the attached polices to the user groups and the differences between the user groups and their permissions.</span></p><h2 id="business-scenario"><span>Business scenario</span></h2><p><span>For the remainder of this lab, you work with these users and user groups to activate permissions supporting the following business scenario:</span></p><p><span>Your company is growing its use of AWS and is using many EC2 instances and a great deal of Amazon S3 storage. You want to give access to new staff members depending upon their job function:</span></p><figure><table><thead><tr><th><span>User</span></th><th><span>In Group</span></th><th><span>Permissions</span></th></tr></thead><tbody><tr><td><span>user-1</span></td><td><span>S3-Support</span></td><td><span>Read-only access to Amazon S3</span></td></tr><tr><td><span>user-2</span></td><td><span>EC2-Support</span></td><td><span>Read-only access to Amazon EC2</span></td></tr><tr><td><span>user-3</span></td><td><span>EC2-Admin</span></td><td><span>View, start, and stop EC2 instances</span></td></tr></tbody></table></figure><p>&nbsp;</p><h2 id="task-3-add-users-to-user-groups"><span>Task 3: Add users to user groups</span></h2><p><span>You have recently hired </span><strong><span>user-1</span></strong><span> into a role where they will provide support for Amazon S3. You add them to the </span><strong><span>S3-Support</span></strong><span> group so that they inherit the necessary permissions via the attached </span><strong><span>AmazonS3ReadOnlyAccess</span></strong><span> policy.</span></p><p><i class="fa fa-comment"></i><span> You can ignore any </span><strong><span>not authorized</span></strong><span> errors that appear during this task. They are caused by your lab account having limited permissions and should not impact your ability to complete the lab.</span></p><h3 id="add-user-1-to-the-s3-support-group"><span>Add user-1 to the S3-Support group</span></h3><ol start="38"><li><p><span>In the left navigation pane, choose </span><strong><span>User groups</span></strong><span>.</span></p></li><li><p><span>Choose the </span><strong><span>S3-Support</span></strong><span> group.</span></p></li><li><p><span>Choose the </span><strong><span>Users</span></strong><span> tab.</span></p></li><li><p><span>In the </span><strong><span>Users</span></strong><span> tab, choose </span><strong><span>Add users</span></strong><span>.</span></p></li><li><p><span>In the </span><strong><span>Add users to S3-Support</span></strong><span> window, configure the following options:</span></p><ul><li><span>Select the check box for </span><i class="fa fa-check-square-o"></i><strong><span>user-1</span></strong><span>.</span></li><li><span>Choose </span><strong><span>Add Users</span></strong><span>.</span></li></ul><p><span>In the </span><strong><span>Users</span></strong><span> tab, you see that user-1 has been added to the group.</span></p></li></ol><h3 id="add-user-2-to-the-ec2-support-group"><span>Add user-2 to the EC2-Support group</span></h3><p><span>You have hired </span><strong><span>user-2</span></strong><span> into a role where they provide support for Amazon EC2.</span></p><ol start="43"><li><p><span>Using the previous steps in this task, add </span><strong><span>user-2</span></strong><span> to the </span><strong><span>EC2-Support</span></strong><span> group.</span></p><p><span>user-2 should now be part of the </span><strong><span>EC2-Support</span></strong><span> group.</span></p></li></ol><h3 id="add-user-3-to-the-ec2-admin-group"><span>Add user-3 to the EC2-Admin group</span></h3><p><span>You have hired </span><strong><span>user-3</span></strong><span> as your Amazon EC2 administrator to manage your EC2 instances.</span></p><ol start="44"><li><p><span>Using the previous steps in this task, add </span><strong><span>user-3</span></strong><span> to the </span><strong><span>EC2-Admin</span></strong><span> group.</span></p><p><span>user-3 should now be part of the </span><strong><span>EC2-Admin</span></strong><span> group.</span></p></li><li><p><span>In the left navigation pane, choose </span><strong><span>User groups</span></strong><span>.</span></p><p><span>Each group should have a </span><strong><span>1</span></strong><span> in the </span><strong><span>Users</span></strong><span> column for the number of users in each group.</span></p><p><span>If there is not a </span><strong><span>1</span></strong><span> beside each group, revisit the previous instructions in this task to confirm that each user is assigned to a group as shown in the table at the beginning of the </span><strong><span>Business scenario</span></strong><span> section.</span></p></li></ol><h3 id="summary-of-task-3"><span>Summary of task 3</span></h3><p><span>In this task, you added all the associated users to the user groups. </span></p><p>&nbsp;</p><h2 id="task-4-sign-in-and-test-user-permissions"><span>Task 4: Sign in and test user permissions</span></h2><p><span>In this task, you test the permissions of each IAM user.</span></p><ol start="46"><li><p><span>In the left navigation pane, choose </span><strong><span>Dashboard</span></strong><span>.</span></p><p><span>The </span><strong><span>AWS Account</span></strong><span> section includes a </span><strong><span>Sign-in URL for IAM users in this account</span></strong><span>. This link should look similar to the following: </span><strong><span>https</span>:<span>//123456789012.signin.aws.amazon.com/console</span></strong></p><p><span>You can use this link to sign in to the AWS account that you are currently using.</span></p></li><li><p><span>Copy the </span><strong><span>Sign-in URL for IAM users in this account</span></strong><span> to a text editor.</span></p></li><li><p><span>Open a private window using the following instructions for your web browser:</span></p><p><strong><span>Mozilla Firefox</span></strong></p><ul><li><span>Choose the menu bars </span><i class="fa fa-bars"></i><span> at the upper-right of the screen.</span></li><li><span>Choose </span><strong><span>New Private Window</span></strong><span>.</span></li></ul><p><strong><span>Google Chrome</span></strong></p><ul><li><span>Choose the ellipsis </span><i class="fa fa-ellipsis-v"></i><span> at the upper-right of the screen.</span></li><li><span>Choose </span><strong><span>New Incognito window</span></strong><span>.</span></li></ul><p><strong><span>Microsoft Edge</span></strong></p><ul><li><span>Choose the ellipsis </span><i class="fa fa-ellipsis-h"></i><span> at the upper-right of the screen.</span></li><li><span>Choose </span><strong><span>New InPrivate window</span></strong><span>.</span></li></ul><p><strong><span>Microsoft Internet Explorer</span></strong></p><ul><li><span>Choose the </span><strong><span>Tools</span></strong><span> menu option.</span></li><li><span>Choose </span><strong><span>InPrivate Browsing</span></strong><span>.</span></li></ul></li><li><p><span>Paste the </span><strong><span>Sign-in URL for IAM users in this account</span></strong><span> into your private window, and press Enter.</span></p><p><span>You now sign in as </span><strong><span>user-1</span></strong><span>, who has been hired as your Amazon S3 storage support staff.</span></p></li><li><p><span>Sign in using the following credentials:</span></p><ul><li><strong><span>IAM user name:</span></strong><span> Enter </span><code>user-1</code></li><li><strong><span>Password:</span></strong><span> Enter </span><code>Lab-Password1</code></li></ul></li><li><p><span>Choose </span><strong><span>Sign in</span></strong><span>.</span></p><p><span>If you see a dialog prompting you to switch to the new console home, choose </span><strong><span>Switch to the new Console Home</span></strong><span>.</span></p></li><li><p><span>From the </span><strong><span>Services</span></strong><span> menu, choose </span><strong><span>S3</span></strong><span>.</span></p></li><li><p><span>Choose the name of one of your buckets, and browse the contents.</span></p><p><span>Because your user is part of the </span><strong><span>S3-Support</span></strong><span> group in IAM, they have permission to view a list of S3 buckets and their contents.</span></p><p><span>Now, test whether they have access to Amazon EC2.</span></p></li><li><p><span>From the </span><strong><span>Services</span></strong><span> menu, choose </span><strong><span>EC2</span></strong><span>.</span></p></li><li><p><span>In the left navigation pane, choose </span><strong><span>Instances</span></strong><span>.</span></p><p><span>You cannot see any instances. Instead, you see a message that says, </span><strong><span>You are not authorized to perform this operation.</span></strong><span> This message appears because your user has not been assigned any permissions to use Amazon EC2.</span></p><p><span>You now sign in as </span><strong><span>user-2</span></strong><span>, who has been hired as your Amazon EC2 support person.</span></p></li><li><p><span>Sign user-1 out of the </span><strong><span>AWS Management Console</span></strong><span> by following these steps:</span></p><ul><li><span>At the top of the screen, choose </span><strong><span>user-1</span></strong><span>.</span></li><li><span>Choose </span><strong><span>Sign out</span></strong><span>.</span></li></ul><p><img src="README_data/user-1-sign-out.png" alt="screenshot"></p></li><li><p><span>Paste the </span><strong><span>Sign-in URL for IAM users in this account</span></strong><span> into your private window, and press Enter.</span></p><p><span>This link should be in your text editor.</span></p></li><li><p><span>Sign in using the following credentials:</span></p><ul><li><strong><span>IAM user name:</span></strong><span> Enter </span><code>user-2</code></li><li><strong><span>Password:</span></strong><span> Enter </span><code>Lab-Password2</code></li></ul></li><li><p><span>Choose </span><strong><span>Sign in</span></strong><span>.</span></p><p><span>If you see a dialog prompting you to switch to the new console home, choose </span><strong><span>Switch to the new Console Home</span></strong><span>.</span></p></li><li><p><span>From the </span><strong><span>Services</span></strong><span> menu, choose </span><strong><span>EC2</span></strong><span>.</span></p></li><li><p><span>In the left navigation pane, choose </span><strong><span>Instances</span></strong><span>.</span></p><p><span>You are now able to see an EC2 instance because you have read-only permissions. However, you are not be able to make any changes to Amazon EC2 resources.</span></p><p><span style="color:red"><i class="fa fa-exclamation-triangle"></i></span><span> If you cannot see an EC2 instance, then your Region may be incorrect. In the upper-right of the screen, choose the </span><strong><span>Region</span></strong><span> menu, and select the Region that you noted at the start of the lab (for example, </span><strong><span>Oregon</span></strong><span>).</span></p><p><img src="README_data/region-user-2.png" alt="screenshot"></p><p><span>Your EC2 instance should be selected</span><i class="fa fa-check-square-o"></i><span>. If it is not, choose </span><i class="fa fa-check-square-o"></i><span>it.</span></p></li><li><p><span>From the </span><strong><span>Instance state</span></strong><span> dropdown list, choose </span><strong><span>Stop instance</span></strong><span>.</span></p></li><li><p><span>In the </span><strong><span>Stop instance?</span></strong><span> window, choose </span><strong><span>Stop</span></strong><span>.</span></p><p><img src="README_data/error-stopping-instances.png" alt="screenshot"></p><p><span>You receive an error that says, </span><strong><span>Failed to stop the instance. You are not authorized to perform this operation</span></strong><span>. This message demonstrates that the policy gives you permission to only view information and does not give you permission to make changes.</span></p></li><li><p><span>At the </span><strong><span>Stop Instances</span></strong><span> window, choose </span><strong><span>Cancel</span></strong><span>.</span></p><p><span>Next, check if user-2 can access Amazon S3.</span></p></li><li><p><span>From the </span><strong><span>Services</span></strong><span> menu, choose </span><strong><span>S3</span></strong><span>.</span></p><p><span>You receive an </span><strong><span>You don't have permissions to list buckets</span></strong><span> message because user-2 does not have permission to use Amazon S3.</span></p><p><span>You now sign in as </span><strong><span>user-3</span></strong><span>, who has been hired as your Amazon EC2 administrator.</span></p></li><li><p><span>Sign user-2 out of the </span><strong><span>AWS Management Console</span></strong><span> by following these steps:</span></p><ul><li><span>At the top of the screen, choose </span><strong><span>user-2</span></strong><span>.</span></li><li><span>Choose </span><strong><span>Sign out</span></strong><span>.</span></li></ul><p><img src="README_data/user-2-sign-out.png" alt="screenshot"></p></li><li><p><span>Paste the </span><strong><span>Sign-in URL for IAM users in this account</span></strong><span> into your private window, and press Enter.</span></p><p><span>If this link is not in your clipboard, retrieve it from the text editor where you pasted it earlier.</span></p></li><li><p><span>Sign in using the following credentials:</span></p><ul><li><strong><span>IAM user name:</span></strong><span> Enter </span><code>user-3</code></li><li><strong><span>Password:</span></strong><span> Enter </span><code>Lab-Password3</code></li></ul></li><li><p><span>Choose </span><strong><span>Sign in</span></strong><span>.</span></p><p><span>If you see a dialog prompting you to switch to the new console home, choose </span><strong><span>Switch to the new Console Home</span></strong><span>.</span></p></li><li><p><span>From the </span><strong><span>Services</span></strong><span> menu, choose </span><strong><span>EC2</span></strong><span>.</span></p></li><li><p><span>In the left navigation pane, choose </span><strong><span>Instances</span></strong><span>.</span></p><p><span>As an EC2 administrator, you should now have permissions to stop the EC2 instance. </span></p><p><span>Your EC2 instance should be selected</span><i class="fa fa-check-square-o"></i><span>. If it is not, choose </span><i class="fa fa-check-square-o"></i><span> it.</span></p><p><i class="fa fa-exclamation-triangle"></i><span> If you cannot see an EC2 instance, then your Region may be incorrect. In the upper-right of the screen, choose the </span><strong><span>Region</span></strong><span> menu, and select the Region that you noted at the start of the lab (for example, </span><strong><span>Oregon</span></strong><span>).</span></p></li><li><p><span>From the </span><strong><span>Instance state</span></strong><span> dropdown list, choose </span><strong><span>Stop instance</span></strong><span>.</span></p></li><li><p><span>In the </span><strong><span>Stop instance?</span></strong><span> window, choose </span><strong><span>Stop</span></strong><span>.</span></p><p><span>The instance should enter the </span><strong><span>Stopping</span></strong><span> state and will shut down.</span></p></li><li><p><span>Close your private window.</span></p></li></ol><h3 id="summary-of-task-4"><span>Summary of task 4</span></h3><p><span>In this task, you were able to sign in as all three users. You verified that user-1 was able to view S3 buckets but unable to view EC2 instances. You then signed in as user-2 and verified that they were able to view EC2 instances but unable to perform the stop instance action. user-2 was also unable to view S3 buckets. After signing in as user-3, you were able to view EC2 instances and perform the stop instance action.</span></p><p>&nbsp;</p><h2 id="conclusion"><span>Conclusion</span></h2><p><i class="fas fa-flag-checkered"></i><span> Congratulations! You now have successfully:</span></p><ul><li><span>Created and applied an IAM password policy</span></li><li><span>Explored pre-created IAM users and user groups</span></li><li><span>Inspected IAM policies as applied to the pre-created user groups</span></li><li><span>Added users to user groups with specific capabilities active</span></li><li><span>Located and used the IAM sign-in URL</span></li><li><span>Experimented with the effects of policies on service access</span></li></ul><p>&nbsp;</p><h2 id="lab-complete"><span>Lab complete</span></h2><ol start="75"><li><span>Choose </span><i class="fas fa-square-full fa-xs"></i><span> </span><strong><span>End Lab</span></strong><span> at the top of this page, and then choose </span><span id="ssb_blue"><span>Yes</span></span><span> to confirm that you want to end the lab.</span></li><li><span>An </span><strong><span>Ended AWS Lab Successfully</span></strong><span> message is briefly displayed indicating that the lab has ended.</span></li></ol><p><span>For more information about AWS Training and Certification, see </span><a href="https://aws.amazon.com/training/"><span>AWS Training and Certification</span></a><span>.</span></p><p><em><span>Your feedback is welcome and appreciated.</span></em></p><p><span>If you would like to share any suggestions or corrections, please provide the details in our </span><a href="https://support.aws.amazon.com/#/contacts/aws-training"><span>AWS Training and Certification Contact Form</span></a><span>.</span></p><p><em><span>© 2022 Amazon Web Services, Inc. and its affiliates. All rights reserved. This work may not be reproduced or redistributed, in whole or in part, without prior written permission from Amazon Web Services, Inc. Commercial copying, lending, or selling is prohibited.</span></em></p></div></div>
+<script defer="defer" src="vedd3670a3b1c4e178fdfb0cc912d969e1713874337387" integrity="sha512-EzCudv2gYygrCcVhu65FkAxclf3mYM6BCwiGUm6BEuLzSb5ulVhgokzCZED7yMIkzYVg65mxfIBNdNra5ZFNyQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;87e5c56a3c539526&quot;,&quot;version&quot;:&quot;2024.4.1&quot;,&quot;token&quot;:&quot;a73834a4a1444e9ab89e8da06da41720&quot;}" crossorigin="anonymous"></script>
+
+</body></html>

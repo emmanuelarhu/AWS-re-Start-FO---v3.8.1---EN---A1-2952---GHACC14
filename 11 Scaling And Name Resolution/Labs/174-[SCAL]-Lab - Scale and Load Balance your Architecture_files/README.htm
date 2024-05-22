@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width initial-scale=1">
+
+<link href="README_data/css.css" rel="stylesheet" type="text/css"><style type="text/css">html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.428571; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit; background-repeat: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { -webkit-user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit; background-repeat: inherit; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title>README</title>
+<!-- START Inserted by CORE -->
+<style type="text/css">
+   #ssb_alexa_blue {
+   background-color: #3366ff;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #3366ff;
+   border-radius: 2px;
+   white-space: nowrap
+   }
+   #ssb_alexa_ocean {
+   background-color: #00a0d2;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #00a0d2;
+   white-space: nowrap
+   }
+   #ssb_alexa_sand {
+   background-color: #f2f2f2;
+   font-weight: bold;
+   font-size: 90%;
+   color: #00a0d2;
+   position: relative;
+   top: -1px;
+   border-color: #dcdcdc;
+   border-style: solid;
+   border-width: 2px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_alexa_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #00a0d2;
+   position: relative;
+   top: -1px;
+   border-color: #00a0d2;
+   border-style: solid;
+   border-width: 2px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_blue {
+   background-color: #257ACF;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   border-radius: 5px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_catalog_orange {
+   background-color: #E36000;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   border-radius: 1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_catalog_red {
+   background-color: #D90000;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   border-radius: 5px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_dark_blue {
+   color: white;
+   background-color: darkblue;
+   border-radius: 3px;
+   padding: 0px 6px;
+   white-space: nowrap
+   }
+   #ssb_grafana_blue {
+   background-color: #00678b;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #00678b;
+   border-radius: 2px;
+   white-space: nowrap
+   }
+   #ssb_grafana_green {
+   background-color: #629300;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #629300;
+   border-radius: 2px;
+   white-space: nowrap
+   }
+   #ssb_grafana_orange {
+   background-color: #ec8427;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #ec8427;
+   border-radius: 2px;
+   white-space: nowrap
+   }
+   #ssb_grey {
+   background-color: #DEDEDE;
+   font-weight: bold;
+   font-size: 90%;
+   color: #444;
+   position: relative;
+   top: -1px;
+   border-radius: 5px;
+   border-width: 1px;
+   border-style: solid;
+   border-color: #444;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_grey_square {
+   background-color: #DEDEDE;
+   font-weight: bold;
+   font-size: 90%;
+   color: #444;
+   position: relative;
+   top: -1px;
+   border-radius: 1px;
+   border-width: 1px;
+   border-style: solid;
+   border-color: #444;
+   padding-top: 2px;
+   padding-bottom: 2px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_iot_blue {
+   background-color: #00A1C9;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #00A1C9;
+   border-radius: 2px;
+   white-space: nowrap
+   }
+   #ssb_iot_grey {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: gray;
+   position: relative;
+   top: -1px;
+   border-color: gray;
+   border-radius: 2px;
+   border-style: solid;
+   border-width: 1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_iot_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #00A1C9;
+   position: relative;
+   top: -1px;
+   border-color: #00A1C9;
+   border-radius: 2px;
+   border-style: solid;
+   border-width: 1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_kibana_blue {
+   background-color: #0079a5;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #0079a5;
+   border-radius: 2px;
+   white-space: nowrap
+   }
+   #ssb_kibana_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #0079a5;
+   position: relative;
+   top: -1px;
+   border-color: #0079a5;
+   border-radius: 2px;
+   border-width: 1px;
+   border-style: solid;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_lambda_orange {
+   background-color: #ec7211;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_lambda_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #545b64;
+   position: relative;
+   top: -1px;
+   border-color: #545b64;
+   border-radius: 2px;
+   border-width: 1px;
+   border-style: solid;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_maroon {
+   color: white;
+   background-color: darkred;
+   border-radius: 3px;
+   padding: 0px 6px;
+   white-space: nowrap
+   }
+   #ssb_orange {
+   background-color: #ec7211;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssl_orange {
+   color: #ec7211;
+   font-weight: bold
+   }
+   #ssb_orange_oval {
+   background-color: #ec7211;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-radius: 20px;
+   white-space: nowrap
+   }
+   #ssb_oval {
+   background-color: #DEDEDE;
+   font-weight: bold;
+   font-size: 90%;
+   color: #444;
+   position: relative;
+   top: -1px;
+   border-radius: 20px;
+   border-width: 1px;
+   border-style: solid;
+   border-color: #444;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssb_start_lab {
+   background-color: #34A853;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   border-radius: 2px;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 3px;
+   padding-bottom: 3px
+   }
+   #ssb_open_console {
+   background-color: white;
+   font-family: Google Sans;
+   font-weight: bold;
+   font-size: 90%;
+   color: #1a73e8;
+   border-color: #dadce0;
+   border-radius: 4px;
+   border-width: 2px;
+   border-style: solid;
+   outline-color: #ffffff;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   padding-left: 10px;
+   padding-right: 10px
+   }
+   #ssb_rds_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #545b64;
+   position: relative;
+   top: -1px;
+   border-color: #545b64;
+   border-radius: 2px;
+   border-width: 1px;
+   border-style: solid;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssb_red {
+   background-color: #D93025;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   border-radius: 2px;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 3px;
+   padding-bottom: 3px
+   }
+   #ssb_red_oval {
+   background-color: #D93025;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-radius: 20px;
+   white-space: nowrap
+   }
+   #ssb_s3_blue {
+   background-color: #329AD6;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssb_s3_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #329AD6;
+   position: relative;
+   top: -1px;
+   border-color: #329AD6;
+   border-width: 1px;
+   border-style: solid;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssb_services {
+   background-color: #232f3e;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssb_square_lex {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #1166bb;
+   position: relative;
+   top: -1px;
+   border-color: #c4cbcd;
+   border-style: solid;
+   border-width: 2px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px
+   }
+   #ssb_ssm_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #545b64;
+   position: relative;
+   top: -1px;
+   border-color: #545b64;
+   border-radius: 2px;
+   border-width: 1px;
+   border-style: solid;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssb_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #545b64;
+   position: relative;
+   top: -1px;
+   border-color: #545b64;
+   border-radius: 2px;
+   border-width: 1px;
+   border-style: solid;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssbox_cloudformation_blue {
+   font-weight: bold;
+   background-color: #f1faff;
+   font-size: 90%;
+   border-color: #00A1C9;
+   border-width: 1px;
+   border-style: solid;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssl_alexa_ocean {
+   color: #00a0d2;
+   font-weight: bold
+   }
+   #ssl_blue {
+   color: #1166bb;
+   font-weight: bold
+   }
+   #ssl_catalog_orange {
+   color: #E16706;
+   font-weight: bold
+   }
+   #ssb_codestar_blue {
+   background-color: #329AD6;
+   font-weight: bold;
+   font-size: 80%;
+   color: white;
+   position: relative;
+   top: -1px;
+   border-radius: 1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_cognito_blue {
+   background-color: #2a7fd4;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #0055aa;
+   border-radius: 2px;
+   white-space: nowrap
+   }
+   #ssb_eb_blue {
+   background-color: #0f6dca;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #0055aa;
+   border-width: 1px;
+   border-style: solid;
+   border-radius: 4px;
+   white-space: nowrap;
+   }
+   #ssb_eb_grey {
+   background-color: #e5e5e5;
+   font-weight: bold;
+   font-size: 90%;
+   color: 444444;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #bbbbbb;
+   border-width: 1px;
+   border-style: solid;
+   border-radius: 4px;
+   white-space: nowrap
+   }
+   #ssb_voc_grey {
+   background-color: #F2F3F4;
+   font-size: 90%;
+   color: black;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: grey;
+   border-width: 1px;
+   border-style: solid;
+   white-space: nowrap
+   }
+   </style>
+<!-- END Inserted by CORE -->
+
+<!-- START Inserted by CORE -->
+<link rel="stylesheet" href="README_data/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<style>
+	.ssb_qwiklab_green{
+		background-color: yellowgreen;
+		font-weight: bold;
+		font-size: 90%;
+		color: white;
+		border-radius: 5px;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		padding-left: 10px;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+	.ssb_blue {
+		background-color: #257ACF;
+		font-weight: bold;
+		font-size: 90%;
+		color: white;
+		border-radius: 5px;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		padding-left: 10px;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+	.ssb_voc_grey {
+		background-color: #F2F3F4;
+		font-weight: normal;
+		font-size: 90%;
+		color: black;
+		border-radius: 3px;
+		border: 1px solid gray;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 6px;
+		padding-right: 6px;
+		white-space: nowrap;
+	}
+	.ssb_grey {
+		background-color: #DEDEDE;
+		font-weight: bold;
+		font-size: 90%;
+		color: #444;
+		position: relative;
+		top:-1px;
+		border-radius: 5px;
+		border-width: 1px;
+		border-style: solid;
+		border-color: #444;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		padding-left: 10px;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+	.ssl_alexa_ocean {
+		color: #00a0d2;
+		font-weight: bold;
+	}
+
+ 	.ssb_services {
+		background-color:#232f3e;
+		font-weight:bold;
+		font-size:90%;
+		color:white;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:10px;
+		padding-right:10px;
+	}
+
+	.ssb_orange {
+		background-color:#ec7211;
+		font-weight:bold;
+		font-size:90%;
+		color:white;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:10px;
+		padding-right:10px;
+		white-space:
+		nowrap;
+	}
+	.ssbox_cloudformation_blue {
+		font-weight:bold;
+		background-color:#f1faff;
+		font-size:90%;
+		border-color:#00A1C9;
+		border-width:1px;
+		border-style:solid;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:10px;
+		padding-right:10px;
+	}
+	.ssb_ssm_white {
+		background-color:white;
+		font-weight:bold;
+		font-size:90%;
+		color:#545b64;
+		border-color:#545b64;
+		border-radius:2px;
+		border-width:1px;
+		border-style:solid;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:10px;
+		padding-right:10px;
+	}
+</style>
+
+<!-- END Inserted by CORE -->
+
+</head>
+<body class="typora-export"><div class="typora-export-content">
+<div id="write" class=""><h1 id="scaling-and-load-balancing-your-architecture"><span>Scaling and Load Balancing Your Architecture</span></h1><h2 id="lab-overview"><span>Lab overview</span></h2><p><span>In this lab, you use the Elastic Load Balancing (ELB) and Amazon EC2 Auto Scaling to load balance and automatically scale your infrastructure.</span></p><p><span>ELB automatically distributes incoming application traffic across multiple Amazon Elastic Compute Cloud (Amazon EC2) instances. ELB provides the amount of load balancing capacity needed to route application traffic to help you achieve fault tolerance in your applications.</span></p><p><span>Auto Scaling helps you maintain application availability and gives you the ability to scale your Amazon EC2 capacity out or in automatically according to conditions that you define. You can use auto scaling to help ensure that you are running your desired number of EC2 instances. Auto scaling can also automatically increase the number of EC2 instances during spikes in demand to maintain performance and can decrease capacity during lulls to reduce costs. Auto scaling is well suited to applications that have stable demand patterns or that experience hourly, daily, or weekly variability in usage.  </span></p><p><span>The following is the starting architecture:</span></p><p><img src="README_data/StartingArchitecture.png" referrerpolicy="no-referrer" alt="Starting architecture showing AWS infrastructure with web server 1 in public subnet."></p><p><span>The following is the final architecture:</span></p><p><img src="README_data/FinalArchitecture.png" referrerpolicy="no-referrer" alt="Final architecture showing ELB and EC2 instances in Auto scaling group in private subnets spread across 2 Availability Zones"></p><p>&nbsp;</p><h2 id="objectives"><span>Objectives</span></h2><p><span>After completing this lab, you should be able to do the following:</span></p><ul><li><p><span>Create an AMI from an EC2 instance.</span></p></li><li><p><span>Create a load balancer.</span></p></li><li><p><span>Create a launch template and an Auto Scaling group.</span></p></li><li><p><span>Configure an Auto Scaling group to scale new instances within private subnets.</span></p></li><li><p><span>Use Amazon CloudWatch alarms to monitor the performance of your infrastructure.</span></p></li></ul><h2 id="duration"><span>Duration</span></h2><p><span>This lab requires approximately </span><strong><span>45 minutes</span></strong><span> to complete.</span></p><p>&nbsp;</p><h2 id="accessing-the-aws-management-console"><span>Accessing the AWS Management Console</span></h2><ol start=""><li><p><span>At the top of these instructions, choose </span><i class="fas fa-caret-right"></i><span> </span><strong><span>Start Lab</span></strong><span> to launch your lab.</span></p><p><strong><span>Tip</span></strong><span>: If you need more time to complete the lab, then choose </span><i class="fas fa-caret-right"></i><span> </span><strong><span>Start Lab</span></strong><span> again to restart the timer for the environment.</span></p></li><li><p><span>Lab resources will be displayed on the upper-left corner:</span></p><ul><li><p><strong><u><span>AWS </span><i class="fas fa-circle fa-xs" style="color:#fff700;"></i></u></strong><span> indicates that AWS lab resources are currently being created.</span></p></li><li><p><strong><u><span>AWS </span><i class="fas fa-circle fa-xs" style="color:#00ff7f;"></i></u></strong><span> indicates that AWS lab resources are ready.</span></p></li></ul><p><span>Wait for the lab to be ready before proceeding.</span></p></li><li><p><span>At the top of these instructions, choose </span><strong><u><span>AWS </span><i class="fas fa-circle fa-xs" style="color:#00ff7f;"></i></u></strong><span>.</span></p><p><span>This option opens the AWS Management Console in a new browser tab. The system automatically signs you in.</span></p><p><strong><span>Tip:</span></strong><span> If a new browser tab does not open, a banner or icon at the top of your browser will indicate that your browser is preventing the site from opening pop-up windows. Choose the banner or icon, and choose </span><strong><span>Allow pop-ups</span></strong><span>.</span></p></li><li><p><span>Arrange the AWS Management Console so that it appears alongside these instructions. Ideally, you will be able to see both browser tabs at the same time so that you can follow the lab steps.</span></p><p><i class="fas fa-exclamation-triangle"></i><span> Do not change the lab Region unless specifically instructed to do so.</span></p></li></ol><p>&nbsp;</p><h2 id="task-1-creating-an-ami-for-auto-scaling"><span>Task 1: Creating an AMI for auto scaling</span></h2><p><span>In this task, you create an AMI from the existing Web Server 1. This action saves the contents of the boot disk so that new instances can be launched with identical content.</span></p><ol start="5"><li><p><span>On the </span><strong><span>AWS Management Console</span></strong><span>, in the </span><strong><span>Search</span></strong><span> bar, enter and choose </span><code>EC2</code><span> to open the </span><strong><span>Amazon EC2 Management Console</span></strong><span>.</span></p></li><li><p><span>In the left navigation pane, locate the </span><strong><span>Instances</span></strong><span> section, and choose </span><strong><span>Instances</span></strong><span>.</span></p><p><span>The </span><strong><span>Web Server 1</span></strong><span> instance is listed. You now create an AMI based on this instance.</span></p></li><li><p><span>Choose the </span><i class="fas fa-check-square"></i><span> </span><strong><span>Web Server 1</span></strong><span> instance, which should appear in a </span><span style="color:green"><i class="far fa-check-circle"></i><span> Running</span></span><span> state.</span></p></li><li><p><span>From the </span><span id="ssb_white"><span>Actions </span><i class="fas fa-angle-down"></i></span><span> dropdown list, choose </span><strong><span>Image and templates</span></strong><span> &gt; </span><strong><span>Create image</span></strong><span>, and then configure the following options:</span></p><ul><li><p><span>For </span><strong><span>Image name</span></strong><span>, enter </span><code>Web Server AMI</code></p></li><li><p><span>For </span><strong><span>Image description - </span><em><span>optional</span></em></strong><span>, enter </span><code>Lab AMI for Web Server</code><span>    </span></p></li></ul></li><li><p><span>Choose </span><span id="ssb_orange"><span>Create image</span></span><span>.</span></p><p><span>The confirmation screen displays the AMI ID for your new AMI. You use this AMI when launching the Auto Scaling group later in the lab.</span></p></li></ol><p><span> </span></p><h2 id="task-2-creating-a-load-balancer"><span>Task 2: Creating a load balancer</span></h2><p><span>In this task, you create a load balancer that can balance traffic across multiple EC2 instances and Availability Zones.</span></p><ol start="10"><li><p><span>In the left navigation pane, locate the </span><strong><span>Load Balancing</span></strong><span> section, and choose </span><strong><span>Load Balancers</span></strong><span>.</span></p></li><li><p><span>Choose </span><span id="ssb_orange"><span>Create load balancer</span></span><span>.</span></p></li><li><p><span>In the </span><strong><span>Load balancer types</span></strong><span> section, for </span><strong><span>Application Load Balancer</span></strong><span>, choose </span><span style="ssb_white"><strong><span>Create</span></strong></span><span>.</span></p></li><li><p><span>On the </span><strong><span>Create Application Load Balancer</span></strong><span> page, in the </span><strong><span>Basic configuration</span></strong><span> section, configure the following option:</span></p><ul><li><p><span>For the </span><strong><span>Load balancer name</span></strong><span>, enter </span><code>LabELB</code></p></li></ul></li><li><p><span>In the </span><strong><span>Network mapping</span></strong><span> section, configure the following options:</span></p><ul><li><p><span>For </span><strong><span>VPC</span></strong><span>, choose </span><strong><span>Lab VPC</span></strong><span>.</span></p></li><li><p><span>For </span><strong><span>Mappings</span></strong><span>, choose both Availability Zones listed.</span></p></li><li><p><span>For the first Availability Zone, choose </span><strong><span>Public Subnet 1</span></strong><span>.</span></p></li><li><p><span>For the second Availability Zone, choose </span><strong><span>Public Subnet 2</span></strong><span>.</span></p></li></ul><p><span>These options configure the load balancer to operate across multiple Availability Zones.</span></p></li><li><p><span>In the </span><strong><span>Security groups</span></strong><span> section, choose the </span><strong><span>X</span></strong><span> for the </span><strong><span>default</span></strong><span> security group to remove it.</span></p></li><li><p><span>From the </span><strong><span>Security groups</span></strong><span> dropdown list, choose </span><strong><span>Web Security Group</span></strong><span>.</span></p><p><span>The </span><strong><span>Web Security Group</span></strong><span> has already been created for you, which permits HTTP access.</span></p></li><li><p><span>In the </span><strong><span>Listeners and routing</span></strong><span> section, choose the </span><strong><span>Create target group</span></strong><span> link.</span></p><p><strong><span>Note:</span></strong><span> This link opens a new browser tab with the </span><strong><span>Create target group</span></strong><span> configuration options.</span></p></li><li><p><span>On the new </span><strong><span>Target groups</span></strong><span> browser tab, in the </span><strong><span>Basic configuration</span></strong><span> section, configure the following:</span></p><ul><li><p><span>For </span><strong><span>Choose a target type</span></strong><span>, choose </span><strong><span>Instances</span></strong><span>.</span></p></li><li><p><span>For </span><strong><span>Target group name</span></strong><span>, enter </span><code>lab-target-group</code></p></li></ul></li><li><p><span>At the bottom of the page, choose </span><span style="ssb_orange"><strong><span>Next</span></strong></span><span>.</span></p></li><li><p><span>On the </span><strong><span>Register targets</span></strong><span> page, choose </span><span style="ssb_orange"><strong><span>Create target group</span></strong></span><span>.</span></p><p><span>Once the target group has been created successfully, close the </span><strong><span>Target groups</span></strong><span> browser tab.</span></p></li><li><p><span>Return to the </span><strong><span>Load balancers</span></strong><span> browser tab. In the </span><strong><span>Listeners and routing</span></strong><span> section, choose </span><i class="fas fa-redo"></i><span> </span><strong><span>Refresh</span></strong><span> to the right of the </span><strong><span>Forward to</span></strong><span> dropdown list for </span><strong><span>Default action</span></strong><span>.</span></p></li><li><p><span>From the </span><strong><span>Forward to</span></strong><span> dropdown list, choose </span><strong><span>lab-target-group</span></strong><span>.</span></p></li><li><p><span>At the bottom of the page, choose </span><span style="ssb_orange"><strong><span>Create load balancer</span></strong></span><span>.</span></p></li></ol><p><span>   You should receive a message similar to the following:</span></p><p><span>   </span><i class="far fa-check-circle" style="color:#18ab4b"></i><span> Successfully created load balancer: LabELB</span></p><ol start="24"><li><p><span>To view the </span><strong><span>LabELB</span></strong><span> load balancer that you created, choose </span><strong><span>View load balancer</span></strong><span>.</span></p></li><li><p><span>To copy the </span><strong><span>DNS name</span></strong><span> of the load balancer, use the copy option </span><i class="fa-thin fa-copy" style="color:#c9208a"></i><span>, and paste the DNS name into a text editor. </span></p><p><span>You need this information later in the lab.</span></p></li></ol><p>&nbsp;</p><h2 id="task-3-creating-a-launch-template"><span>Task 3: Creating a launch template </span></h2><p><span>In this task, you create a </span><em><span>launch template</span></em><span> for your Auto Scaling group. A launch template is a template that an Auto Scaling group uses to launch EC2 instances. When you create a launch template, you specify information for the instances, such as the AMI, instance type, key pair, security group, and disks.</span></p><ol start="26"><li><p><span>At the top of the AWS Management Console, in the search bar, enter and choose </span><code>EC2</code></p></li><li><p><span>In the left navigation pane, locate the </span><strong><span>Instances</span></strong><span> section, and choose </span><strong><span>Launch Templates</span></strong><span>.</span></p></li><li><p><span>Choose </span><span style="ssb_orange"><strong><span>Create launch template</span></strong></span><span>.</span></p></li><li><p><span>On the </span><strong><span>Create launch template</span></strong><span> page, in the </span><strong><span>Launch template name and description</span></strong><span> section, configure the following options:</span></p><ul><li><p><span>For </span><strong><span>Launch template name - </span><em><span>required</span></em></strong><span>, enter </span><code>lab-app-launch-template</code></p></li><li><p><span>For </span><strong><span>Template version description</span></strong><span>, enter </span><code>A web server for the load test app</code></p></li><li><p><span>For </span><strong><span>Auto Scaling guidance</span></strong><span>, choose </span><i class="fas fa-check-square"></i><span> </span><strong><span>Provide guidance to help me set up a template that I can use with EC2 Auto Scaling</span></strong><span>.</span></p></li></ul></li><li><p><span>In the </span><strong><span>Application and OS Images (Amazon Machine Image) - required</span></strong><span> section, choose the </span><strong><span>My AMIs</span></strong><span> tab. Notice that </span><strong><span>Web Server AMI</span></strong><span> is already chosen.</span></p></li><li><p><span>In the </span><strong><span>Instance type</span></strong><span> section, choose the </span><strong><span>Instance type</span></strong><span> dropdown list, and choose </span><strong><span>t3.micro</span></strong><span>.</span></p></li><li><p><span>In the </span><strong><span>Key pair (login)</span></strong><span> section, confirm that the </span><strong><span>Key pair name</span></strong><span> dropdown list is set to </span><strong><span>Don't include in launch template</span></strong><span>.</span></p><p><span>  </span><i class="fas fa-info-circle"></i><span> Amazon EC2 uses public key cryptography to encrypt and decrypt login information. To log in to your instance, you must create a key pair, specify the name of the key pair when you launch the instance, and provide the private key when you connect to the instance.</span></p><p><span>  </span><strong><span>Note:</span></strong><span> In this lab, you do not need to connect to the instance.</span></p></li><li><p><span>In the </span><strong><span>Network settings</span></strong><span> section, choose the </span><strong><span>Security groups</span></strong><span> dropdown list, and choose </span><strong><span>Web Security Group</span></strong><span>.</span></p><p><span>  When you launch an instance, you can pass user data to the instance. The data can be used to run configuration tasks and scripts.</span></p></li><li><p><span>Choose </span><span style="ssb_orange"><strong><span>Create launch template</span></strong></span><span>.</span></p></li></ol><p><span>		</span><span>You should receive a message similar to the following:</span></p><p><span>		</span><i class="far fa-check-circle" style="color:#18ab4b"></i><span> Successfully created lab-app-launch-template.</span></p><ol start="35"><li><p><span>Choose </span><span style="ssb_orange"><strong><span>View launch templates</span></strong></span><span>.</span></p></li></ol><p>&nbsp;</p><h2 id="task-4-creating-an-auto-scaling-group"><span>Task 4: Creating an Auto Scaling group</span></h2><p><span>In this task, you use your launch template to create an Auto Scaling group.</span></p><ol start="36"><li><p><span>Choose </span><i class="far fa-dot-circle"></i><span> </span><strong><span>lab-app-launch-template</span></strong><span>, and then from the </span><span id="ssb_white"><span>Actions </span><i class="fas fa-angle-down"></i></span><span> dropdown list, choose </span><strong><span>Create Auto Scaling group</span></strong></p></li><li><p><span>On the </span><strong><span>Choose launch template or configuration</span></strong><span> page, in the </span><strong><span>Name</span></strong><span> section, for </span><strong><span>Auto Scaling group name</span></strong><span>, enter </span><code>Lab Auto Scaling Group</code></p></li><li><p><span>Choose </span><span style="ssb_orange"><strong><span>Next</span></strong></span><span>.</span></p></li><li><p><span>On the </span><strong><span>Choose instance launch options</span></strong><span> page, in the </span><strong><span>Network</span></strong><span> section, configure the following options:</span></p><ul><li><p><span>From the </span><strong><span>VPC</span></strong><span> dropdown list, choose </span><strong><span>Lab VPC</span></strong><span>.</span></p></li><li><p><span>From the </span><strong><span>Availability Zones and subnets</span></strong><span> dropdown list, choose </span><strong><span>Private Subnet 1 (10.0.1.0/24)</span></strong><span> and </span><strong><span>Private Subnet 2 (10.0.3.0/24)</span></strong><span>. </span></p></li></ul></li><li><p><span>Choose </span><span style="ssb_orange"><strong><span>Next</span></strong></span><span>.</span></p></li><li><p><span>On the </span><strong><span>Configure advanced options </span>–<span> </span><em><span>optional</span></em></strong><span> page, configure the following options: </span></p><ul><li><p><span>In the </span><strong><span>Load balancing </span>–<span> </span><em><span>optional</span></em></strong><span> section, choose </span><strong><span>Attach to an existing load balancer</span></strong><span>.</span></p></li><li><p><span>In the </span><strong><span>Attach to an existing load balancer</span></strong><span> section, configure the following options:</span></p><ul><li><p><span>Choose </span><strong><span>Choose from your load balancer target groups</span></strong><span>.</span></p></li><li><p><span>From the </span><strong><span>Existing load balancer target groups</span></strong><span> dropdown list, choose </span><strong><span>lab-target-group | HTTP</span></strong><span>.</span></p></li></ul></li><li><p><span>In the </span><strong><span>Health checks </span>–<span> </span><em><span>optional</span></em></strong><span> section, for </span><strong><span>Health check type</span></strong><span>, choose </span><i class="fas fa-check-square"></i><span> </span><strong><span>ELB</span></strong><span>.</span></p></li></ul></li><li><p><span>Choose </span><span style="ssb_orange"><strong><span>Next</span></strong></span><span>.</span></p></li><li><p><span>On the </span><strong><span>Configure group size and scaling policies </span>–<span> </span><em><span>optional</span></em></strong><span> page, configure the following options: </span></p><ul><li><p><span>In the </span><strong><span>Group size </span>–<span> </span><em><span>optional</span></em></strong><span> section, enter the following values: </span></p><ul><li><p><strong><span>Desired capacity</span></strong><span>:</span><code>2</code></p></li><li><p><strong><span>Minimum capacity</span></strong><span>: </span><code>2</code></p></li><li><p><strong><span>Maximum capacity</span></strong><span>: </span><code>4</code></p></li></ul></li><li><p><span>In the </span><strong><span>Scaling policies </span>–<span> </span><em><span>optional</span></em></strong><span> section, configure the following options:</span></p><ul><li><p><span>Choose </span><i class="fas fa-dot-circle"></i><span> </span><strong><span>Target tracking scaling policy</span></strong><span>.</span></p></li><li><p><span>For </span><strong><span>Metric type</span></strong><span>, choose </span><strong><span>Average CPU utilization</span></strong><span>.</span></p></li><li><p><span>Change the </span><strong><span>Target value</span></strong><span> to </span><code>50</code></p></li></ul><p><span>This change tells Auto Scaling to maintain an average CPU utilization across all instances of 50 percent. Auto Scaling automatically adds or removes capacity as required to keep the metric at or close to the specified target value. It adjusts to fluctuations in the metric due to a fluctuating load pattern.</span></p></li></ul></li><li><p><span>Choose </span><span style="ssb_orange"><strong><span>Next</span></strong></span><span>.</span></p></li><li><p><span>On the </span><strong><span>Add notifications </span>–<span> </span><em><span>optional</span></em></strong><span> page, choose </span><span style="ssb_orange"><strong><span>Next</span></strong></span><span>.</span></p></li><li><p><span>On the </span><strong><span>Add tags </span>–<span> </span><em><span>optional</span></em></strong><span> page, choose </span><span style="ssb_white"><strong><span>Add tag</span></strong></span><span> and configure the following options:</span></p><ul><li><p><strong><span>Key:</span></strong><span> Enter </span><code>Name</code></p></li><li><p><strong><span>Value - optional:</span></strong><span> Enter </span><code>Lab Instance</code></p></li></ul></li><li><p><span>Choose </span><span style="ssb_orange"><strong><span>Next</span></strong></span><span>.</span></p></li><li><p><span>Choose </span><span id="ssb_orange"><strong><span>Create Auto Scaling group</span></strong></span><span>.</span></p><p><span>These options launch EC2 instances in private subnets across both Availability Zones.</span></p><p><span>Your Auto Scaling group initially shows an </span><strong><span>Instances</span></strong><span> count of zero, but new instances will be launched to reach the desired count of two instances.</span></p><p><strong><span>Note</span></strong><span>: If you experience an error related to the t3.micro instance type not being available, then rerun this task by choosing the t2.micro instance type instead.</span></p></li></ol><p>&nbsp;</p><h2 id="task-5-verifying-that-load-balancing-is-working"><span>Task 5: Verifying that load balancing is working</span></h2><p><span>In this task, you verify that load balancing is working correctly.</span></p><ol start="49"><li><p><span>In the left navigation pane, locate the </span><strong><span>Instances</span></strong><span> section, and choose </span><strong><span>Instances</span></strong><span>.</span></p><p><span>You should see two new instances named </span><strong><span>Lab Instance</span></strong><span>. These instances were launched by auto scaling. </span><i class="fas fa-comment"></i><span> If the instances or names are not displayed, wait 30 seconds, and then choose refresh </span><i class="fas fa-sync"></i><span>.</span></p><p><span>First, you confirm that the new instances have passed their health check.</span></p></li><li><p><span>In the left navigation pane, in the </span><strong><span>Load Balancing</span></strong><span> section, choose </span><strong><span>Target Groups</span></strong><span>.</span></p></li><li><p><span>Choose </span><strong><span>lab-target-group</span></strong><span>.</span></p><p><span>In the </span><strong><span>Registered targets</span></strong><span> section, two </span><strong><span>Lab Instance</span></strong><span> targets should be listed for this target group.</span></p></li><li><p><span>Wait until the </span><strong><span>Health status</span></strong><span> of both instances changes to </span><em><span>healthy</span></em><span>. To check for updates, choose refresh </span><i class="fas fa-sync"></i><span>.</span></p><p><span>A </span><em><span>healthy</span></em><span> status indicates that an instance has passed the load balancer's health check. This check means that the load balancer will send traffic to the instance.</span></p><p><span>You can now access the instances launched in the Auto Scaling group using the load balancer.</span></p></li><li><p><span>Open a new web browser tab, paste the DNS name that you copied before, and press Enter.</span></p><p><span>The </span><strong><span>Load Test</span></strong><span> application should appear in your browser, which means that the load balancer received the request, sent it to one of the EC2 instances, and then passed back the result.</span></p></li></ol><p>&nbsp;</p><h2 id="task-6-testing-auto-scaling"><span>Task 6: Testing auto scaling</span></h2><p><span>You created an Auto Scaling group with a minimum of two instances and a maximum of four instances. Currently, two instances are running because the minimum size is two and the group is currently not under any load. You now increase the load to cause auto scaling to add additional instances.</span></p><ol start="56"><li><p><span>Return to the AWS Management Console, but keep the </span><strong><span>Load Test</span></strong><span> application tab open. You return to this tab soon.</span></p></li><li><p><span>In the AWS Management Console, in the search bar, enter and choose </span><code>CloudWatch</code></p></li><li><p><span>In the left navigation pane, in the </span><strong><span>Alarms</span></strong><span> section, choose </span><strong><span>All alarms</span></strong><span>.</span></p><p><span>Two alarms are displayed. The Auto Scaling group automatically created these two alarms. These alarms automatically keep the average CPU load close to 50 percent while also staying within the limitation of having 2–4 instances.</span></p></li><li><p><span>Choose the alarm that has </span><strong><span>AlarmHigh</span></strong><span> in its name. This alarm should have a </span><strong><span>State</span></strong><span> of </span><em><span>OK</span></em><span>.</span></p><p><i class="fas fa-comment"></i><span> If the alarm is not showing </span><em><span>OK</span></em><span> for the </span><strong><span>State</span></strong><span>, wait a minute and then choose refresh </span><i class="fas fa-sync"></i><span> until the </span><strong><span>State</span></strong><span> changes.</span></p><p><span>The </span><em><span>OK</span></em><span> state indicates that the alarm has not been initiated. It is the alarm for </span><strong><span>CPU Utilization &gt; 50</span></strong><span>, which adds instances when the average CPU utilization is high. The chart should show very low levels of CPU at the moment. </span></p><p><span>You now tell the application to perform calculations that should raise the CPU level.</span></p></li><li><p><span>Return to the browser tab with the </span><strong><span>Load Test</span></strong><span> application.</span></p></li><li><p><span>Next to the AWS logo, choose </span><strong><span>Load Test</span></strong><span>.</span></p><p><span>This step causes the application to generate high loads. The browser page automatically refreshes so that all instances in the Auto Scaling group will generate loads. Do not close this tab.</span></p></li><li><p><span>Return to browser tab with the </span><strong><span>CloudWatch Management Console</span></strong><span>.</span></p><p><span>In less than 5 minutes, the </span><strong><span>AlarmLow</span></strong><span> alarm status should change to </span><em><span>OK</span></em><span>, and the </span><strong><span>AlarmHigh</span></strong><span> alarm status should change to </span><em><span>In alarm</span></em><span>.</span></p><p><i class="fas fa-comment"></i><span> To update the display, choose refresh </span><i class="fas fa-sync"></i><span> every 60 seconds.</span></p><p><span>You should see the </span><strong><span>AlarmHigh</span></strong><span> chart indicating an increasing CPU percentage. Once it crosses the 50 percent line for more than 3 minutes, it initiates auto scaling to add additional instances.</span></p></li><li><p><span>Wait until the </span><strong><span>AlarmHigh</span></strong><span> alarm enters the </span><em><span>In alarm</span></em><span> state.</span></p><p><span>You can now view the additional instance or instances that were launched.</span></p></li><li><p><span>In the AWS Management Console, in the search bar, enter and choose </span><code>EC2</code><span> </span></p></li><li><p><span>In the left navigation pane, locate the </span><strong><span>Instances</span></strong><span> section, and choose </span><strong><span>Instances</span></strong><span>.</span></p><p><span>More than two instances named </span><strong><span>Lab Instance</span></strong><span> should now be running. Auto scaling created the new instances in response to the alarm.</span></p></li></ol><p>&nbsp;</p><h2 id="task-7-terminating-the-web-server-1-instance"><span>Task 7: Terminating the Web Server 1 instance</span></h2><p><span>In this task, you terminate the </span><strong><span>Web Server 1</span></strong><span> instance. This instance was used to create the AMI that your Auto Scaling group used, but this instance is no longer needed.</span></p><ol start="66"><li><p><span>Choose </span><i class="far fa-check-square"></i><span> </span><strong><span>Web Server 1</span></strong><span>, and ensure that it is the only instance selected.</span></p></li><li><p><span>From the </span><span id="ssb_grey"><span>Instance state </span><i class="fas fa-angle-down"></i></span><span> dropdown menu, choose </span><strong><span>Terminate instance</span></strong><span>.</span></p></li><li><p><span>Choose </span><span id="ssb_orange"><span>Terminate</span></span><span>.</span></p></li></ol><p>&nbsp;</p><h2 id="optional-challenge-creating-an-ami-using-aws-cli"><span>Optional challenge: Creating an AMI using AWS CLI </span></h2><p><i class="fas fa-comment"></i><span> This challenge is optional and is provided in case you have lab time remaining.</span></p><p><span>In this challenge, you need to create an AMI using AWS Command Line Interface (AWS CLI) commands.</span></p><ol start="69"><li><p><span>The following are your tasks:</span></p><ul><li><p><span>Use Amazon EC2 Instance Connect to connect to one of the EC2 instances that you created earlier.</span></p></li><li><p><span>At the top of this page, choose </span><strong><span>AWS Details</span></strong><span>. For </span><strong><span>AWS CLI</span></strong><span>, choose </span><strong><span>Show</span></strong><span>. Configure AWS credentials based on the information provided.</span></p><ul><li><p><span>For more information about how to configure AWS credentials, see </span><a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html" target="_blank" rel="noopener noreferrer"><span>Configuration and Credential File Settings</span></a><span>.</span></p></li></ul></li><li><p><span>After you have configured the credentials, create an AMI using AWS CLI. </span></p><ul><li><p><span>For more information about how to create an AMI using AWS CLI, see </span><a href="https://docs.aws.amazon.com/cli/latest/reference/ec2/create-image.html#examples" target="_blank" rel="noopener noreferrer"><span>AWS CLI Command Reference Examples</span></a><span>.</span></p></li></ul><p><strong><span>Tip:</span></strong><span> You need to provide the AMI name and instance ID of the EC2 instance that you need the image for.</span></p></li></ul></li></ol><p>&nbsp;</p><h2 id="conclusion"><span>Conclusion</span></h2><p><span>Congratulations! You now have successfully done the following:</span></p><ul><li><p><span>Created an AMI from an EC2 instance.</span></p></li><li><p><span>Created a load balancer.</span></p></li><li><p><span>Created a launch template and an Auto Scaling group.</span></p></li><li><p><span>Configured an Auto Scaling group to scale new instances within private subnets.</span></p></li><li><p><span>Used CloudWatch alarms to monitor the performance of your infrastructure.</span></p></li></ul><p>&nbsp;</p><h2 id="lab-complete-i-classfas-fa-graduation-capi"><span>Lab complete </span><i class="fas fa-graduation-cap"></i></h2><p><i class="icon-flag-checkered"></i><span> Congratulations! You have completed the lab.</span></p><ol start="70"><li><p><span>At the top of this page, choose </span><i class="fas fa-square-full fa-xs"></i><span> </span><strong><span>End Lab</span></strong><span> and then choose </span><span id="ssb_blue"><span>Yes</span></span><span> to confirm that you want to end the lab.  </span></p><p><span>A message "Ended AWS Lab Successfully" is briefly displayed to indicate that the lab has ended.</span></p></li></ol><h2 id="additional-resources"><span>Additional resources</span></h2><ul><li><p><a href="https://aws.amazon.com/ec2/autoscaling/getting-started/" target="_blank" rel="noopener noreferrer"><span>Amazon EC2 Auto Scaling Getting Started</span></a></p></li><li><p><a href="https://aws.amazon.com/elasticloadbalancing/getting-started" target="_blank" rel="noopener noreferrer"><span>Getting Started with Elastic Load Balancing</span></a></p></li></ul><p><span>For more information about AWS Training and Certification, see </span><a href="http://aws.amazon.com/training/" target="_blank" rel="noopener noreferrer"><span>AWS Training and Certification</span></a><span>.</span></p><p><em><span>Your feedback is welcome and appreciated.</span></em></p><p><span>If you would like to share any suggestions or corrections, please provide the details in our </span><a href="https://support.aws.amazon.com/#/contacts/aws-training" target="_blank" rel="noopener noreferrer"><span>AWS Training and Certification Contact Form</span></a><span>.</span></p><p><em><span>© 2023, Amazon Web Services, Inc. or its affiliates. All rights reserved. This work may not be reproduced or redistributed, in whole or in part, without prior written permission from Amazon Web Services, Inc. Commercial copying, lending, or selling is prohibited.</span></em></p></div></div>
+<script defer="defer" src="vedd3670a3b1c4e178fdfb0cc912d969e1713874337387" integrity="sha512-EzCudv2gYygrCcVhu65FkAxclf3mYM6BCwiGUm6BEuLzSb5ulVhgokzCZED7yMIkzYVg65mxfIBNdNra5ZFNyQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;88553a3378567773&quot;,&quot;version&quot;:&quot;2024.4.1&quot;,&quot;token&quot;:&quot;a73834a4a1444e9ab89e8da06da41720&quot;}" crossorigin="anonymous"></script>
+
+</body></html>

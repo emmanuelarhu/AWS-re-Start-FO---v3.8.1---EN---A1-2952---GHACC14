@@ -1,0 +1,24 @@
+div.voc-rubric {
+    visibility: hidden;
+}
+
+input.voc_radio, input.voc_checkbox {
+    visibility: hidden;
+	margin-right: 5px;
+    margin-left: 10px;
+}
+
+.voc_radio_label, .voc_checkbox_label {
+    visibility: hidden;
+    font-weight: 400;
+}
+
+div.tab-content {
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 100px;
+}
+
+.navbar-fixed-bottom {
+    margin-bottom: 20px;
+}

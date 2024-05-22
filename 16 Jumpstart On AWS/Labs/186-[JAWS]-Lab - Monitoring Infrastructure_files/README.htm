@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width initial-scale=1">
+
+<link href="README_data/css.css" rel="stylesheet" type="text/css"><style type="text/css">html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.428571; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-size-adjust: inherit; font-kerning: inherit; font-variant-alternates: inherit; font-variant-ligatures: inherit; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant-position: inherit; font-variant-emoji: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-variation-settings: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; border-right-style: none; border-right-color: currentcolor; background-color: inherit; }
+.CodeMirror-linenumber { -webkit-user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: medium; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: medium !important; border-style: none !important; border-color: currentcolor !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; border-bottom-style: none; border-bottom-color: currentcolor; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: medium; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left-width: 0.25em; border-left-style: solid; border-left-color: rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: medium !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right-width: medium; border-right-style: none; border-right-color: currentcolor; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-width: medium; border-right-style: none; border-right-color: currentcolor; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.mac-os #write{
+    caret-color: AccentColor;
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title>README</title>
+<!-- START Inserted by CORE -->
+<style type="text/css">
+   #ssb_alexa_blue {
+   background-color: #3366ff;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #3366ff;
+   border-radius: 2px;
+   white-space: nowrap
+   }
+   #ssb_alexa_ocean {
+   background-color: #00a0d2;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #00a0d2;
+   white-space: nowrap
+   }
+   #ssb_alexa_sand {
+   background-color: #f2f2f2;
+   font-weight: bold;
+   font-size: 90%;
+   color: #00a0d2;
+   position: relative;
+   top: -1px;
+   border-color: #dcdcdc;
+   border-style: solid;
+   border-width: 2px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_alexa_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #00a0d2;
+   position: relative;
+   top: -1px;
+   border-color: #00a0d2;
+   border-style: solid;
+   border-width: 2px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_blue {
+   background-color: #257ACF;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   border-radius: 5px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_catalog_orange {
+   background-color: #E36000;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   border-radius: 1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_catalog_red {
+   background-color: #D90000;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   border-radius: 5px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_dark_blue {
+   color: white;
+   background-color: darkblue;
+   border-radius: 3px;
+   padding: 0px 6px;
+   white-space: nowrap
+   }
+   #ssb_grafana_blue {
+   background-color: #00678b;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #00678b;
+   border-radius: 2px;
+   white-space: nowrap
+   }
+   #ssb_grafana_green {
+   background-color: #629300;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #629300;
+   border-radius: 2px;
+   white-space: nowrap
+   }
+   #ssb_grafana_orange {
+   background-color: #ec8427;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #ec8427;
+   border-radius: 2px;
+   white-space: nowrap
+   }
+   #ssb_grey {
+   background-color: #DEDEDE;
+   font-weight: bold;
+   font-size: 90%;
+   color: #444;
+   position: relative;
+   top: -1px;
+   border-radius: 5px;
+   border-width: 1px;
+   border-style: solid;
+   border-color: #444;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_grey_square {
+   background-color: #DEDEDE;
+   font-weight: bold;
+   font-size: 90%;
+   color: #444;
+   position: relative;
+   top: -1px;
+   border-radius: 1px;
+   border-width: 1px;
+   border-style: solid;
+   border-color: #444;
+   padding-top: 2px;
+   padding-bottom: 2px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_iot_blue {
+   background-color: #00A1C9;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #00A1C9;
+   border-radius: 2px;
+   white-space: nowrap
+   }
+   #ssb_iot_grey {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: gray;
+   position: relative;
+   top: -1px;
+   border-color: gray;
+   border-radius: 2px;
+   border-style: solid;
+   border-width: 1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_iot_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #00A1C9;
+   position: relative;
+   top: -1px;
+   border-color: #00A1C9;
+   border-radius: 2px;
+   border-style: solid;
+   border-width: 1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_kibana_blue {
+   background-color: #0079a5;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #0079a5;
+   border-radius: 2px;
+   white-space: nowrap
+   }
+   #ssb_kibana_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #0079a5;
+   position: relative;
+   top: -1px;
+   border-color: #0079a5;
+   border-radius: 2px;
+   border-width: 1px;
+   border-style: solid;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_lambda_orange {
+   background-color: #ec7211;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_lambda_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #545b64;
+   position: relative;
+   top: -1px;
+   border-color: #545b64;
+   border-radius: 2px;
+   border-width: 1px;
+   border-style: solid;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_maroon {
+   color: white;
+   background-color: darkred;
+   border-radius: 3px;
+   padding: 0px 6px;
+   white-space: nowrap
+   }
+   #ssb_orange {
+   background-color: #ec7211;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssl_orange {
+   color: #ec7211;
+   font-weight: bold
+   }
+   #ssb_orange_oval {
+   background-color: #ec7211;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-radius: 20px;
+   white-space: nowrap
+   }
+   #ssb_oval {
+   background-color: #DEDEDE;
+   font-weight: bold;
+   font-size: 90%;
+   color: #444;
+   position: relative;
+   top: -1px;
+   border-radius: 20px;
+   border-width: 1px;
+   border-style: solid;
+   border-color: #444;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssb_start_lab {
+   background-color: #34A853;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   border-radius: 2px;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 3px;
+   padding-bottom: 3px
+   }
+   #ssb_open_console {
+   background-color: white;
+   font-family: Google Sans;
+   font-weight: bold;
+   font-size: 90%;
+   color: #1a73e8;
+   border-color: #dadce0;
+   border-radius: 4px;
+   border-width: 2px;
+   border-style: solid;
+   outline-color: #ffffff;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   padding-left: 10px;
+   padding-right: 10px
+   }
+   #ssb_rds_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #545b64;
+   position: relative;
+   top: -1px;
+   border-color: #545b64;
+   border-radius: 2px;
+   border-width: 1px;
+   border-style: solid;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssb_red {
+   background-color: #D93025;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   border-radius: 2px;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 3px;
+   padding-bottom: 3px
+   }
+   #ssb_red_oval {
+   background-color: #D93025;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-radius: 20px;
+   white-space: nowrap
+   }
+   #ssb_s3_blue {
+   background-color: #329AD6;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssb_s3_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #329AD6;
+   position: relative;
+   top: -1px;
+   border-color: #329AD6;
+   border-width: 1px;
+   border-style: solid;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssb_services {
+   background-color: #232f3e;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssb_square_lex {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #1166bb;
+   position: relative;
+   top: -1px;
+   border-color: #c4cbcd;
+   border-style: solid;
+   border-width: 2px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px
+   }
+   #ssb_ssm_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #545b64;
+   position: relative;
+   top: -1px;
+   border-color: #545b64;
+   border-radius: 2px;
+   border-width: 1px;
+   border-style: solid;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssb_white {
+   background-color: white;
+   font-weight: bold;
+   font-size: 90%;
+   color: #545b64;
+   position: relative;
+   top: -1px;
+   border-color: #545b64;
+   border-radius: 2px;
+   border-width: 1px;
+   border-style: solid;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssbox_cloudformation_blue {
+   font-weight: bold;
+   background-color: #f1faff;
+   font-size: 90%;
+   border-color: #00A1C9;
+   border-width: 1px;
+   border-style: solid;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   }
+   #ssl_alexa_ocean {
+   color: #00a0d2;
+   font-weight: bold
+   }
+   #ssl_blue {
+   color: #1166bb;
+   font-weight: bold
+   }
+   #ssl_catalog_orange {
+   color: #E16706;
+   font-weight: bold
+   }
+   #ssb_codestar_blue {
+   background-color: #329AD6;
+   font-weight: bold;
+   font-size: 80%;
+   color: white;
+   position: relative;
+   top: -1px;
+   border-radius: 1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   white-space: nowrap
+   }
+   #ssb_cognito_blue {
+   background-color: #2a7fd4;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #0055aa;
+   border-radius: 2px;
+   white-space: nowrap
+   }
+   #ssb_eb_blue {
+   background-color: #0f6dca;
+   font-weight: bold;
+   font-size: 90%;
+   color: white;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #0055aa;
+   border-width: 1px;
+   border-style: solid;
+   border-radius: 4px;
+   white-space: nowrap;
+   }
+   #ssb_eb_grey {
+   background-color: #e5e5e5;
+   font-weight: bold;
+   font-size: 90%;
+   color: 444444;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: #bbbbbb;
+   border-width: 1px;
+   border-style: solid;
+   border-radius: 4px;
+   white-space: nowrap
+   }
+   #ssb_voc_grey {
+   background-color: #F2F3F4;
+   font-size: 90%;
+   color: black;
+   position: relative;
+   top: -1px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+   border-color: grey;
+   border-width: 1px;
+   border-style: solid;
+   white-space: nowrap
+   }
+   </style>
+<!-- END Inserted by CORE -->
+
+<!-- START Inserted by CORE -->
+<link rel="stylesheet" href="README_data/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<style>
+	.ssb_qwiklab_green{
+		background-color: yellowgreen;
+		font-weight: bold;
+		font-size: 90%;
+		color: white;
+		border-radius: 5px;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		padding-left: 10px;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+	.ssb_blue {
+		background-color: #257ACF;
+		font-weight: bold;
+		font-size: 90%;
+		color: white;
+		border-radius: 5px;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		padding-left: 10px;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+	.ssb_voc_grey {
+		background-color: #F2F3F4;
+		font-weight: normal;
+		font-size: 90%;
+		color: black;
+		border-radius: 3px;
+		border: 1px solid gray;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 6px;
+		padding-right: 6px;
+		white-space: nowrap;
+	}
+	.ssb_grey {
+		background-color: #DEDEDE;
+		font-weight: bold;
+		font-size: 90%;
+		color: #444;
+		position: relative;
+		top:-1px;
+		border-radius: 5px;
+		border-width: 1px;
+		border-style: solid;
+		border-color: #444;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		padding-left: 10px;
+		padding-right: 10px;
+		white-space: nowrap;
+	}
+	.ssl_alexa_ocean {
+		color: #00a0d2;
+		font-weight: bold;
+	}
+
+ 	.ssb_services {
+		background-color:#232f3e;
+		font-weight:bold;
+		font-size:90%;
+		color:white;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:10px;
+		padding-right:10px;
+	}
+
+	.ssb_orange {
+		background-color:#ec7211;
+		font-weight:bold;
+		font-size:90%;
+		color:white;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:10px;
+		padding-right:10px;
+		white-space:
+		nowrap;
+	}
+	.ssbox_cloudformation_blue {
+		font-weight:bold;
+		background-color:#f1faff;
+		font-size:90%;
+		border-color:#00A1C9;
+		border-width:1px;
+		border-style:solid;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:10px;
+		padding-right:10px;
+	}
+	.ssb_ssm_white {
+		background-color:white;
+		font-weight:bold;
+		font-size:90%;
+		color:#545b64;
+		border-color:#545b64;
+		border-radius:2px;
+		border-width:1px;
+		border-style:solid;
+		padding-top:3px;
+		padding-bottom:3px;
+		padding-left:10px;
+		padding-right:10px;
+	}
+</style>
+
+<!-- END Inserted by CORE -->
+
+</head>
+<body class="typora-export"><div class="typora-export-content">
+<div id="write" class=""><h1 id="monitoring-infrastructure"><span>Monitoring Infrastructure</span></h1><!---
+Note for Translators: This lab is based on Academy Cloud Operations. You should be able to copy a lot of translated text from that lab.
+--><h2 id="lab-overview"><span>Lab Overview</span></h2><p><span>The ability to monitor your applications and infrastructure is critical for delivering reliable, consistent IT services.</span></p><p><span>Monitoring requirements range from collecting statistics for long-term analysis to quickly reacting to changes and outages. Monitoring can also support compliance reporting by continuously checking that infrastructure is meeting organizational standards.</span></p><p><span>This lab shows you how to use Amazon CloudWatch Metrics, Amazon CloudWatch Logs, Amazon CloudWatch Events, and AWS Config to monitor your applications and infrastructure.</span></p><p><span>After completing this lab, you will be able to:</span></p><ul><li><p><span>Use the AWS Systems Manager Run Command to install the CloudWatch agent on Amazon Elastic Compute Cloud (Amazon EC2) instances</span></p></li><li><p><span>Monitor application logs using CloudWatch agent and CloudWatch Logs</span></p></li><li><p><span>Monitor system metrics using CloudWatch agent and CloudWatch Metrics</span></p></li><li><p><span>Create real time notifications using CloudWatch Events</span></p></li><li><p><span>Track infrastructure compliance using AWS Config</span></p></li></ul><p><strong><span>Duration</span></strong></p><p><span>This lab requires approximately </span><strong><span>60 minutes</span></strong><span> to complete.</span></p><p>&nbsp;</p><h2 id="accessing-the-aws-management-console"><span>Accessing the AWS Management Console</span></h2><ol start=""><li><p><span>At the top of these instructions, select </span><span id="ssb_voc_grey"><span>Start Lab</span></span><span> to launch your lab.</span></p></li></ol><p><span>A Start Lab panel opens displaying the lab status. </span></p><ol start="2"><li><p><span>Wait until you see the message </span><strong><span>Lab status: ready</span></strong><span>, and then select the </span><strong><span>X</span></strong><span> to close the Start Lab panel.</span></p></li><li><p><span>At the top of these instructions, select </span><span id="ssb_voc_grey"><span>AWS</span></span></p></li></ol><p><span>This step opens the AWS Management Console in a new browser tab. The system automatically logs you in.</span></p><p><strong><span>Tip</span></strong><span>: If a new browser tab does not open, a banner or icon at the top of your browser typically indicates that your browser is preventing the site from opening pop-up windows. Select the banner or icon, and choose </span><strong><span>Allow pop-ups</span></strong><span>.</span></p><ol start="4"><li><p><span>Arrange the AWS Management Console tab so that it displays alongside these instructions. Ideally, you should be able to see both browser tabs at the same time to make it easier to follow the lab steps.</span></p></li></ol><p><i class="fas fa-exclamation-triangle"></i><span> Do not change the Region during this lab.</span></p><p>&nbsp;</p><h2 id="task-1-installing-the-cloudwatch-agent"><span>Task 1: Installing the CloudWatch agent</span></h2><p><span>You can use the CloudWatch agent to collect metrics from EC2 instances and on-premises servers, including the following:</span></p><ul><li><p><strong><span>System-level metrics from EC2 instances</span></strong><span>, such as CPU allocation, free disk space, and memory utilization. These metrics are collected from the machine itself and complement the standard CloudWatch metrics that CloudWatch collects.</span></p></li><li><p><strong><span>System-level metrics from on-premises servers</span></strong><span> that enable the monitoring of hybrid environments and servers not managed by AWS.</span></p></li><li><p><strong><span>System and application logs</span></strong><span> from both Linux and Windows servers.</span></p></li><li><p><strong><span>Custom metrics</span></strong><span> from applications and services using the </span><a href="https://github.com/etsy/statsd" target="_blank" rel="noopener noreferrer"><span>StatsD</span></a><span> and </span><a href="https://collectd.org/" target="_blank" rel="noopener noreferrer"><span>collectd</span></a><span> protocols.</span></p></li></ul><p><span>In this task, you use Systems Manager to install the CloudWatch agent on an EC2 instance. You configure it to collect both application and system metrics.</span></p><p><img src="README_data/install-agent.png" alt="AWS Systems Manager" width="700"></p><ol start="5"><li><p><span>In the </span><strong><span>AWS Management Console</span></strong><span>, on the </span><span id="ssb_services"><span>Services </span><i class="fas fa-angle-down"></i></span><span> menu, select </span><strong><span>Systems Manager</span></strong><span>.</span></p></li><li><p><span>In the left navigation pane, choose </span><strong><span>Run Command</span></strong><span>.</span></p><p><i class="fas fa-comment"></i><span> If there is no visible navigation pane, choose the </span><i class="fa fa-bars"></i><span> icon in the top-left corner to make it appear.</span></p><p><span>You will use the Run Command to deploy a pre-written command that installs the CloudWatch agent.</span></p></li><li><p><span>Choose </span><span id="ssb_orange"><span>Run a Command</span></span></p></li><li><p><span>Select the button next to </span><i class="fas fa-dot-circle" style="color:#0073BB;"></i><span> </span><strong><span>AWS-ConfigureAWSPackage</span></strong><span> (typically appears toward the top of the list).  </span></p></li><li><p><span>Scroll to the </span><strong><span>Command parameters</span></strong><span> section and configure the following information:</span></p><ul><li><p><strong><span>Action:</span></strong><span> Select </span><strong><span>Install</span></strong><span>.</span></p></li><li><p><strong><span>Name:</span></strong><span> Enter </span><code>AmazonCloudWatchAgent</code></p></li><li><p><strong><span>Version:</span></strong><span> Enter </span><code>latest</code></p></li></ul></li><li><p><span>In the </span><strong><span>Targets</span></strong><span> section, select </span><i class="fas fa-dot-circle" style="color:#0073BB;"></i><strong><span>Choose instances manually</span></strong><span>, and then under </span><strong><span>Instances</span></strong><span>, select the check box next to </span><strong><span>Web Server</span></strong><span>.</span></p><p><span>This configuration installs the CloudWatch agent on the web server.</span></p></li><li><p><span>At the bottom of the page, choose </span><span id="ssb_orange"><span>Run</span></span></p></li><li><p><span>Wait for the </span><strong><span>Overall status</span></strong><span> to change to </span><strong><span>Success</span></strong><span>. You can occasionally choose </span><i class="fas fa-redo"></i><span> refresh toward the top of the page to update the status.</span></p><p><span>You can view the output from the job to confirm that it ran successfully.</span></p></li><li><p><span>Under </span><strong><span>Targets and outputs</span></strong><span>, choose </span><i class="fas fa-dot-circle" style="color:#0073BB;"></i><span> next to the instance, and then click </span><span id="ssb_white"><span>View output</span></span><span>.</span></p></li><li><p><span>Expand </span><i class="fas fa-caret-right"></i><span> </span><strong><span>Step 1 - Output</span></strong><span>.</span></p><p><span> You should see the message </span><strong><span>Successfully installed arn:aws:ssm:::package/AmazonCloudWatchAgent</span></strong><span>.</span></p><p><span> If you see the message </span><strong><span>Step execution skipped due to unsatisfied preconditions: '"StringEquals": [platformType, Windows]'. Step name: createDownloadFolder</span></strong><span>, then expand </span><i class="fas fa-caret-right"></i><span> </span><strong><span>Step 2 - Output</span></strong><span> instead. You can select this option because the instance you are using was created from a Linux AMI. You can safely ignore this message.</span></p><p><span> You now configure the CloudWatch agent to collect the desired log information. The instance has a web server installed, so you configure the CloudWatch agent to collect the web server logs and general system metrics.</span></p><p><span> You will store the configuration file in AWS Systems Manager Parameter Store, which the CloudWatch agent can then retrieve.</span></p></li><li><p><span>In the left navigation pane, choose </span><strong><span>Parameter Store</span></strong><span>.</span></p></li><li><p><span>Choose </span><span id="ssb_orange"><span>Create parameter</span></span><span>, and then configure the following information:</span></p><ul><li><p><strong><span>Name:</span></strong><span> Enter </span><code>Monitor-Web-Server</code></p></li><li><p><strong><span>Description:</span></strong><span> Enter </span><code>Collect web logs and system metrics</code></p></li><li><p><strong><span>Value:</span></strong><span> Copy and paste the following configuration:</span></p></li></ul><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="json" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="json"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="none" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: currentcolor;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: currentcolor;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">{</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-string cm-property">"logs"</span>: {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string cm-property">"logs_collected"</span>: {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"files"</span>: {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"collect_list"</span>: [</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;  {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"log_group_name"</span>: <span class="cm-string">"HttpAccessLog"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"file_path"</span>: <span class="cm-string">"/var/log/httpd/access_log"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"log_stream_name"</span>: <span class="cm-string">"{instance_id}"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"timestamp_format"</span>: <span class="cm-string">"%b %d %H:%M:%S"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;  },</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;  {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"log_group_name"</span>: <span class="cm-string">"HttpErrorLog"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"file_path"</span>: <span class="cm-string">"/var/log/httpd/error_log"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"log_stream_name"</span>: <span class="cm-string">"{instance_id}"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"timestamp_format"</span>: <span class="cm-string">"%b %d %H:%M:%S"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  ]</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  },</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-string cm-property">"metrics"</span>: {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string cm-property">"metrics_collected"</span>: {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"cpu"</span>: {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"measurement"</span>: [</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string">"cpu_usage_idle"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string">"cpu_usage_iowait"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string">"cpu_usage_user"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string">"cpu_usage_system"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  ],</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"metrics_collection_interval"</span>: <span class="cm-number">10</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"totalcpu"</span>: <span class="cm-atom">false</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  },</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"disk"</span>: {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"measurement"</span>: [</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string">"used_percent"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string">"inodes_free"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  ],</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"metrics_collection_interval"</span>: <span class="cm-number">10</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"resources"</span>: [</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string">"*"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  ]</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  },</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"diskio"</span>: {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"measurement"</span>: [</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string">"io_time"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  ],</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"metrics_collection_interval"</span>: <span class="cm-number">10</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"resources"</span>: [</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string">"*"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  ]</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  },</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"mem"</span>: {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"measurement"</span>: [</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string">"mem_used_percent"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  ],</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"metrics_collection_interval"</span>: <span class="cm-number">10</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  },</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"swap"</span>: {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"measurement"</span>: [</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string">"swap_used_percent"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  ],</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-string cm-property">"metrics_collection_interval"</span>: <span class="cm-number">10</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 1541px;"></div><div class="CodeMirror-gutters" style="display: none; height: 1541px;"></div></div></div></pre><p><span>Examine the above configuration. It defines the following items to be monitored:</span></p><ul><li><p><strong><span>Logs:</span></strong><span> Two web server log files to be collected and sent to CloudWatch Logs</span></p></li><li><p><strong><span>Metrics:</span></strong><span> CPU, disk, and memory metrics to sent to CloudWatch Metrics</span></p></li></ul></li><li><p><span>Choose </span><span id="ssb_orange"><span>Create parameter</span></span></p><p><span>This parameter will be referenced when starting the CloudWatch agent.</span></p><p><span>You now use another Run Command to start the CloudWatch agent on the web server.</span></p></li><li><p><span>In the left navigation pane, choose </span><strong><span>Run Command</span></strong><span>.</span></p></li><li><p><span>Choose </span><span id="ssb_orange"><span>Run command</span></span></p></li><li><p><span>Choose the </span><i class="fa fa-search"></i><span> box, and then select the following:</span></p><ul><li><p><span>Select </span><strong><span>Document name prefix</span></strong><span>.</span></p></li><li><p><span>Select </span><strong><span>Equals</span></strong><span>.</span></p></li><li><p><span>Enter </span><code>AmazonCloudWatch-ManageAgent</code></p></li><li><p><span>Verify that the filter is </span><strong><span>Document name prefix : Equals : AmazonCloudWatch-ManageAgent</span></strong></p></li><li><p><span>Press Enter.</span></p></li></ul><p><span> Before running the command, you can view the definition of the command.</span></p></li><li><p><span>Choose </span><strong><span>AmazonCloudWatch-ManageAgent</span></strong><span> (choose the name itself).</span></p><p><span>A new web browser tab opens that shows the definition of the command.</span></p><p><span>Browse through the content of each tab to see how a command document is defined.</span></p></li><li><p><span>Choose the </span><strong><span>Content</span></strong><span> tab, and scroll to the bottom to see the actual script that will run on the target instance.</span></p><p><span>The script references the AWS Systems Manager Parameter Store because it retrieves the CloudWatch agent configuration that you defined earlier.</span></p></li><li><p><span>Close the current web browser tab, which should return you to the </span><strong><span>Run a command</span></strong><span> tab that you were using earlier.</span></p><p><span>Verify that you have selected the button </span><i class="fas fa-dot-circle" style="color:#0073BB;"></i><span> next to </span><strong><span>AmazonCloudWatch-ManageAgent</span></strong><span>.</span></p></li><li><p><span>In the </span><strong><span>Command parameters</span></strong><span> section, configure the following information:</span></p><ul><li><p><strong><span>Action:</span></strong><span> Select </span><strong><span>configure</span></strong><span>.</span></p></li><li><p><strong><span>Mode:</span></strong><span> Select </span><strong><span>ec2</span></strong><span>.</span></p></li><li><p><strong><span>Optional Configuration Source:</span></strong><span> Select </span><strong><span>ssm</span></strong><span>.</span></p></li><li><p><strong><span>Optional Configuration Location:</span></strong><span> Enter </span><code>Monitor-Web-Server</code></p></li><li><p><strong><span>Optional Restart:</span></strong><span> Select </span><strong><span>yes</span></strong><span>.</span></p></li></ul><p><span>This configures the agent to use the configuration you previously stored in the Parameter Store.</span></p></li><li><p><span>In the </span><strong><span>Targets</span></strong><span> section, select </span><i class="fas fa-dot-circle" style="color:#0073BB;"></i><strong><span>Choose instances manually</span></strong><span>.</span></p></li><li><p><span>In the </span><strong><span>Instances</span></strong><span> section, select the check box next to </span><strong><span>Web Server</span></strong><span>.</span></p></li><li><p><span>Choose </span><span id="ssb_orange"><span>Run</span></span></p></li><li><p><span>Wait for the </span><strong><span>Overall status</span></strong><span> to change to </span><strong><span>Success</span></strong><span>. You can occasionally choose </span><i class="fas fa-redo"></i><span> refresh toward the top of the page to update the status.</span></p><p><span>The CloudWatch agent is now running on the instance and sending log and metric data to CloudWatch.</span></p></li></ol><p>&nbsp;</p><h2 id="task-2-monitoring-application-logs-using-cloudwatch-logs"><span>Task 2: Monitoring application logs using CloudWatch Logs</span></h2><p><span>You can use CloudWatch Logs to monitor applications and systems using log data. For example, CloudWatch Logs can track the number of errors that occur in your application logs and send you a notification whenever the rate of errors exceeds a threshold that you specify.</span></p><p><span>CloudWatch Logs uses your existing log data for monitoring, so no code changes are required. For example, you can monitor application logs for specific literal terms (such as "NullReferenceException") or count the number of occurrences of a literal term at a particular position in log data (such as 404 status codes in a web server access log). When the term you are searching for is found, CloudWatch Logs reports the data to a CloudWatch metric that you specify. Log data is encrypted while in transit and while it is at rest.</span></p><p><span>In this task, you generate log data on the Web Server and then monitor the logs using CloudWatch Logs.</span></p><p><img src="README_data/cloudwatch-logs.png" alt="CloudWatch Logs" width="700"></p><p><span>The Web Server generates two types of log data:</span></p><ul><li><p><span>Access logs</span></p></li><li><p><span>Error logs</span></p></li></ul><p><span>You begin by accessing the web server.</span></p><ol start="29"><li><p><span>Choose the </span><span id="ssb_voc_grey"><span>Details</span></span><span> dropdown menu above these instructions, and then choose </span><span id="ssb_voc_grey"><span>Show</span></span></p><p><span>Copy the </span><strong><span>WebServerIP</span></strong><span> value.</span></p></li><li><p><span>Open a new web browser tab, paste the </span><strong><span>WebServerIP</span></strong><span> you copied, and then press Enter.</span></p><p><span>You should see a web server </span><strong><span>Test Page</span></strong><span>.</span></p><p><span>You now generate log data by attempting to access a page that does not exist.</span></p></li><li><p><span>Append </span><code>/start</code><span> to the browser URL, and press Enter.</span></p><p><span>You receive an error message because the page is not found. This is okay! It generates data in the access logs that are being sent to CloudWatch Logs.</span></p></li><li><p><span>Keep this tab open in your web browser, but return to the browser tab showing the AWS Management Console.</span></p></li><li><p><span>From the </span><span id="ssb_services"><span>Services </span><i class="fas fa-angle-down"></i></span><span> menu, choose </span><strong><span>CloudWatch</span></strong><span>.</span></p></li><li><p><span>In the left navigation pane, choose </span><strong><span>Log groups</span></strong><span>.</span></p><p><span>You should see two logs listed: </span><strong><span>HttpAccessLog</span></strong><span> and </span><strong><span>HttpErrorLog</span></strong><span>.</span></p><p><i class="fas fa-exclamation-triangle"></i><span> If these logs are not listed, try waiting a minute, and then choose </span><i class="fas fa-sync"></i><span> </span><strong><span>Refresh</span></strong><span>.</span></p></li><li><p><span>Choose </span><strong><span>HttpAccessLog</span></strong><span> (choose the name itself).</span></p></li><li><p><span>In the </span><strong><span>Logs streams</span></strong><span> section, choose the </span><strong><span>Log stream</span></strong><span> in the table (choose the name itself). It has the same ID as the EC2 instance that the log is attached to.</span></p><p><span>Log data should be displayed, consisting of </span><strong><span>GET</span></strong><span> requests that were sent to the web server. You can view additional information by choosing </span><i class="fas fa-caret-right"></i><span> to expand the lines. The log data includes information about the computer and the browser that made the request.</span></p><p><span>You should see a line with your </span><strong><span>/start</span></strong><span> request with a code of 404, which means that the page was not found.</span></p><p><span>This demonstrates how log files can be automatically shipped from an EC2 instance or an on-premises server to CloudWatch Logs. The log data is accessible without having to log in to each individual server. Log data can also be collected from multiple servers, such as an Auto Scaling fleet of web servers.</span></p></li></ol><p>&nbsp;</p><h3 id="create-a-metric-filter-in-cloudwatch-logs"><span>Create a metric filter in CloudWatch Logs</span></h3><p><span>You now configure a filter to identify </span><strong><span>404 Errors</span></strong><span> in the log file. This error would normally indicate that the web server is generating invalid links that users are choosing.</span></p><ol start="37"><li><p><span>In the left navigation pane, choose </span><strong><span>Log groups</span></strong><span>.</span></p></li><li><p><span>Select the check box next to </span><strong><span>HttpAccessLog</span></strong><span>. </span></p></li><li><p><span>From the </span><span id="ssb_white"><span>Actions</span></span><span> dropdown menu, select </span><strong><span>Create metric filter</span></strong><span>.</span></p><p><span>A filter pattern defines the fields in the log file and filters the data for specific values.</span></p></li><li><p><span>Paste the following line into the </span><strong><span>Filter pattern</span></strong><span> box:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="plain"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="plain"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="none" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: currentcolor;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: currentcolor;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">[ip, id, user, timestamp, request, status_code=404, size]</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 23px;"></div><div class="CodeMirror-gutters" style="display: none; height: 23px;"></div></div></div></pre><p><span>This line tells CloudWatch Logs how to interpret the fields in the log data and defines a filter to find lines only with </span><strong><span>status_code=404</span></strong><span>, which indicates that a page was not found.</span></p></li><li><p><span>In the </span><strong><span>Test pattern</span></strong><span> section, use the dropdown menu to select the EC2 instance id. It is be similar to </span><strong><span>i-0f07ab62aae4xxxx9</span></strong><span>.</span></p></li><li><p><span>Choose </span><span id="ssb_white"><span>Test pattern</span></span></p></li><li><p><span>In the </span><strong><span>Results</span></strong><span> section, choose </span><strong><span>Show test results</span></strong><span>.</span></p><p><span>You should see at least one result with a </span><strong><span>$status_code</span></strong><span> of </span><strong><span>404</span></strong><span>. This status code indicates that a page was requested that was not found.</span></p></li><li><p><span>Choose </span><span id="ssb_orange"><span>Next</span></span></p></li><li><p><span>In the </span><strong><span>Create filter name</span></strong><span> section, in the </span><strong><span>Filter name</span></strong><span> box, enter </span><code>404Errors</code></p></li><li><p><span>In the </span><strong><span>Metric details</span></strong><span> section, configure the following information:</span></p><ul><li><p><strong><span>Metric namespace:</span></strong><span> Enter </span><code>LogMetrics</code></p></li><li><p><strong><span>Metric name:</span></strong><span> Enter </span><code>404Errors</code></p></li><li><p><strong><span>Metric value:</span></strong><span> Enter </span><code>1</code></p></li></ul></li><li><p><span>Choose </span><span id="ssb_orange"><span>Next</span></span><span>. If </span><em><span>Next</span></em><span> is not enabled, click an empty text field, this will shift focus and enable it.</span></p></li><li><p><span>On the </span><strong><span>Review and create</span></strong><span> page, choose </span><span id="ssb_orange"><span>Create metric filter</span></span></p><p><span>This metric filter can now be used in an alarm.</span></p></li></ol><p>&nbsp;</p><h3 id="create-an-alarm-using-the-filter"><span>Create an alarm using the filter</span></h3><p><span>You now configure an alarm to send a notification when too many </span><strong><span>404 Not Found</span></strong><span> errors are received.</span></p><ol start="49"><li><p><span>In the </span><strong><span>404Errors</span></strong><span> panel, choose the check box in the top-right corner.</span></p></li><li><p><span>In the </span><strong><span>Metric filters</span></strong><span> section, choose </span><span id="ssb_white"><span>Create alarm</span></span></p></li><li><p><span>Configure the following settings:</span></p><ul><li><p><span>In the </span><strong><span>Metrics</span></strong><span> section, for </span><strong><span>Period</span></strong><span>, select </span><strong><span>1 minute</span></strong><span>.</span></p></li><li><p><span>In the </span><strong><span>Conditions</span></strong><span> section, select the following:</span></p><ul><li><p><strong><span>Whenever 404Errors is</span></strong><span>: Select </span><i class="fas fa-dot-circle" style="color:#0073BB;"></i><span> </span><strong><span>Greater/Equal</span></strong></p></li><li><p><strong><span>than</span></strong><span>: Enter </span><code>5</code></p></li></ul></li><li><p><span>Choose </span><span id="ssb_orange"><span>Next</span></span></p></li></ul></li><li><p><span>In the </span><strong><span>Notification</span></strong><span> section, configure the following:</span></p><ul><li><p><strong><span>Select an SNS Topic:</span></strong><span> Select </span><i class="fas fa-dot-circle" style="color:#0073BB;"></i><span> </span><strong><span>Create new topic</span></strong><span>.</span></p></li><li><p><strong><span>Email endpoints that will receive the notification:</span></strong><span> Enter an email address that you can access from the classroom.</span></p></li><li><p><span>Choose </span><span id="ssb_white"><span>Create topic</span></span></p></li><li><p><span>Choose </span><span id="ssb_orange"><span>Next</span></span></p></li></ul></li><li><p><span>For </span><strong><span>Name and description</span></strong><span>, configure the following settings:</span></p><ul><li><p><strong><span>Alarm name:</span></strong><span> Enter </span><code>404 Errors</code></p></li><li><p><strong><span>Alarm description:</span></strong><span> Enter </span><code>Alert when too many 404s detected on an instance</code></p></li><li><p><span>Choose </span><span id="ssb_orange"><span>Next</span></span></p></li></ul></li><li><p><span>Choose </span><span id="ssb_orange"><span>Create alarm</span></span></p></li><li><p><span>Go to your email, look for a confirmation message, and select the </span><strong><span>Confirm subscription</span></strong><span> link.</span></p></li><li><p><span>Return to the AWS Management Console.</span></p></li><li><p><span>In the left navigation pane, choose </span><strong><span>CloudWatch</span></strong><span> (at the very top). </span></p><p><span>Your alarm might appear in </span><span style="color:orange"><span>orange</span></span><span>, indicating that there is </span><strong><span>Insufficient data</span></strong><span> to trigger the alarm. This alarm appears because no data has been received in the past minute.</span></p><p><span>You now access the web server to generate log data.</span></p></li><li><p><span>Return to the web browser tab with the web server.</span></p></li></ol><p><i class="fas fa-comment"></i><span> If the web server browser tab is no longer open, choose the </span><span id="ssb_voc_grey"><span>Details</span></span><span> dropdown menu above these instructions, and then choose </span><span id="ssb_voc_grey"><span>Show</span></span></p><p><span>Copy the </span><strong><span>WebServerIP</span></strong><span> value, and paste it into a new browser tab.</span></p><ol start="59"><li><p><span>Attempt to go to pages that do not exist by adding a page name after the IP address. Repeat this step at least five times.</span></p><p><span>For example, enter </span><code>http://192.0.2.0/start2</code></p><p><span>Each separate request generates a separate log entry.</span></p></li><li><p><span>Wait 1-2 minutes for the alarm to trigger. In the AWS Management Console, you can occasionally choose </span><i class="fas fa-redo"></i><span> </span><strong><span>Refresh</span></strong><span> to update the status.</span></p><p><span>The graph shown on the CloudWatch page should turn </span><span style="color:red"><span>red</span></span><span> to indicate that it is in the </span><strong><span>Alarm</span></strong><span> state.</span></p></li><li><p><span>Check your email. You should have received an email with the subject </span><strong><span>ALARM: "404 Errors"</span></strong><span>.</span></p><p><span>This task demonstrates how you can create an alarm from application log data and receive alerts when unusual behavior is detected in the log file. The log file is accessible within CloudWatch Logs to perform further analysis to diagnose the activities that triggered the alarm.</span></p></li></ol><p>&nbsp;</p><h2 id="task-3-monitoring-instance-metrics-using-cloudwatch"><span>Task 3: Monitoring instance metrics using CloudWatch</span></h2><p><span>Metrics are data about the performance of your systems. CloudWatch stores metrics for the AWS services you use. You can also publish your own application metrics either via the CloudWatch agent or directly from your application. CloudWatch can present the metrics for search, graphs, dashboards, and alarms.</span></p><p><span>In the task, you use metrics that CloudWatch provides.</span></p><p><img src="README_data/cloudwatch-metrics.png" alt="CloudWatch Metrics" width="700"></p><ol start="62"><li><p><span>On the </span><span id="ssb_services"><span>Services </span><i class="fas fa-angle-down"></i></span><span> menu, choose </span><strong><span>EC2</span></strong><span>.</span></p></li><li><p><span>In the left navigation pane, choose </span><strong><span>Instances</span></strong><span>.</span></p></li><li><p><span>Select the check box next to </span><strong><span>Web Server</span></strong><span>.</span></p></li><li><p><span>Choose the </span><strong><span>Monitoring</span></strong><span> tab in the lower half of the page.</span></p><p><span>Examine the metrics presented. You can also select a chart to display more information.</span></p><p><span>CloudWatch captures metrics about CPU, disk, and network usage on the instance. These metrics view the instance from the outside as a virtual machine but do not give insight into what is running inside the instance, such as measuring free memory or free disk space. Fortunately, you can obtain information about what is happening inside the instance by using information that the CloudWatch agent captures because the CloudWatch agent runs inside the instance to collect metrics.</span></p></li><li><p><span>From the </span><strong><span>Services menu</span></strong><span>, select </span><strong><span>CloudWatch</span></strong><span>.</span></p></li><li><p><span>In the left navigation pane, choose </span><strong><span>Metrics</span></strong><span>. Then expand </span><i class="fas fa-caret-right"></i><span> </span><strong><span>Metrics</span></strong><span> and select All metrics.</span></p><p><span>The lower half of the page displays the various metrics that CloudWatch has collected. AWS automatically generates some of these metrics, and the CloudWatch agent collects some others.</span></p></li><li><p><span>Choose </span><strong><span>CWAgent</span></strong><span>, and then choose </span><strong><span>device, fstype, host, path</span></strong><span>.</span></p><p><span>You see the disk space metrics that the CloudWatch agent is capturing.</span></p></li><li><p><span>Above the table, choose </span><strong><span>CWAgent</span></strong><span> (in the line that says </span><strong><span>All &gt; CWAgent &gt; device, fstype, host, path</span></strong><span>).</span></p></li><li><p><span>Choose </span><strong><span>host</span></strong><span>.</span></p><p><span>You see metrics relating to system memory.</span></p></li><li><p><span>Above the table, choose </span><strong><span>All</span></strong><span> (in the line that says </span><strong><span>All &gt; CWAgent &gt; device, fstype, host, path</span></strong><span>).</span></p><p><span>Explore the other metrics that CloudWatch is capturing. These are automatically generated metrics coming from the AWS services that have been used in this AWS account.</span></p><p><span>You can </span><i class="far fa-check-square" style="color:#0073BB;"></i><span> select metrics that you want to appear on the graph.</span></p></li></ol><p>&nbsp;</p><h2 id="task-4-creating-real-time-notifications"><span>Task 4: Creating real time notifications</span></h2><p><span>CloudWatch Events deliver a near-real-time stream of system events that describe changes in AWS resources. Simple rules can match events and route them to one or more target functions or streams. CloudWatch Events become aware of operational changes as they occur.</span></p><p><span>CloudWatch Events respond to these operational changes and take corrective action as necessary by sending messages to respond to the environment, activating functions, making changes, and capturing state information. You can also use CloudWatch Events to schedule automated actions that self trigger at certain times using cron or rate expressions.</span></p><p><span>In this task, you create a real time notification that informs you when an instance is stopped or terminated.</span></p><p><img src="README_data/cloudwatch-events.png" alt="CloudWatch Events" width="700"></p><ol start="72"><li><p><span>In the left navigation pane expand </span><i class="fas fa-caret-right"></i><span> </span><strong><span>Events</span></strong><span>, choose </span><strong><span>Rules</span></strong><span>.</span></p></li><li><p><span>Choose </span><strong><span>Create rule</span></strong><span>.</span></p></li><li><p><span>In the </span><strong><span>Event Source</span></strong><span> section, configure the following settings:</span></p><ul><li><p><strong><span>Service Name:</span></strong><span> Select </span><strong><span>EC2</span></strong><span>.</span></p></li><li><p><strong><span>Event Type:</span></strong><span> Select </span><strong><span>EC2 Instance State-change Notification</span></strong><span>.</span></p></li><li><p><span>Select the check box for </span><i class="fas fa-dot-circle" style="color:#0073BB;"></i><span> </span><strong><span>Specific state(s)</span></strong><span>.</span></p></li><li><p><span>From the dropdown menu, select </span><strong><span>stopped</span></strong><span> and </span><strong><span>terminated</span></strong><span>.</span></p></li></ul></li><li><p><span>In the </span><strong><span>Targets</span></strong><span> section on the right, configure the following settings:</span></p><ul><li><p><span>Select </span><span id="ssb_grey"><span>  </span><i class="fas fa-plus-circle"></i><span> </span><strong><span>Add target</span></strong></span><span>.</span></p></li><li><p><span>In the dropdown menu with  </span><strong><span>Lambda function</span></strong><span>, select </span><strong><span>SNS topic</span></strong><span>.</span></p></li><li><p><span>For </span><strong><span>Topic</span></strong><span>, select the </span><strong><span>Default_CloudWatch_Alarms_Topic</span></strong><span> option.</span></p></li></ul></li><li><p><span>At the bottom of the page, choose </span><span id="ssb_blue"><span>Configure details</span></span></p></li><li><p><span>In the </span><strong><span>Rule definition</span></strong><span>, configure the following settings:</span></p><ul><li><p><span>For </span><strong><span>Name</span></strong><span>, enter </span><code>Instance_Stopped_Terminated</code></p></li><li><p><span>Choose </span><span id="ssb_blue"><span>Create rule</span></span></p></li></ul></li></ol><p>&nbsp;</p><h3 id="configure-a-real-time-notification"><span>Configure a real time notification</span></h3><p><span>You can configure Amazon Simple Notification Service (Amazon SNS) to send the real time notifications to your phone via SMS, or to your email address. Because configuring SMS messaging requires opening a ticket with AWS Support as well as time to configure the changes to your account, you will use the same email address you used earlier to complete this exercise.</span></p><p><span>You can read more about configuring SMS messaging with SNS in the </span><a href="https://docs.aws.amazon.com/sns/latest/dg/sns-mobile-phone-number-as-subscriber.html" target="_blank" rel="noopener noreferrer"><span>Amazon Simple Notification Service Developer Guide</span></a><span>.</span></p><ol start="78"><li><p><span>On the </span><span id="ssb_services"><span>Services </span><i class="fas fa-angle-down"></i></span><span> menu, choose </span><strong><span>Simple Notification Service</span></strong><span>.</span></p></li><li><p><span>In the left navigation pane, choose </span><strong><span>Topics</span></strong><span>.</span></p></li><li><p><span>Choose the link in the </span><strong><span>Name</span></strong><span> column.</span></p><p><span>You should see a single subscription associated with your email address. This is the Topic you configured in Task 2.</span></p></li><li><p><span>On the </span><span id="ssb_services"><span>Services </span><i class="fas fa-angle-down"></i></span><span> menu, choose </span><strong><span>EC2</span></strong><span>.</span></p></li><li><p><span>In the left navigation pane, choose </span><strong><span>Instances</span></strong><span>.</span></p></li><li><p><span>Select the check box next to </span><strong><span>Web Server</span></strong><span>.</span></p></li><li><p><span>Choose </span><span id="ssb_white"><span>Instance state&nbsp;</span><i class="fas fa-angle-down"></i></span><span>, then </span><strong><span>Stop instance</span></strong><span>, and then </span><span id="ssb_orange"><span>Stop</span></span></p><p><span>The </span><strong><span>Web Server</span></strong><span> instance enters the </span><strong><span>Stopping</span></strong><span> state. After a minute, it enters the </span><strong><span>Stopped</span></strong><span> state.</span></p></li></ol><p><span>You should then receive an email with details about the instance that was stopped.</span></p><p><span>The message is formatted in JSON. To receive a message that is easier to read, you could create an AWS Lambda function that CloudWatch Events triggers. The Lambda function could then format a more readable message and send it via Amazon SNS.</span></p><p><span>This task demonstrates how to receive real time notifications when infrastructure changes.</span></p><p>&nbsp;</p><h2 id="task-5-monitoring-for-infrastructure-compliance"><span>Task 5: Monitoring for infrastructure compliance</span></h2><p><span>With AWS Config, you can assess, audit, and evaluate the configurations of your AWS resources. AWS Config continuously monitors and records your AWS resource configurations and allows you to automate the evaluation of recorded configurations against desired configurations.</span></p><p><span>With AWS Config, you can review changes in configurations and relationships between AWS resources, dive into detailed resource configuration histories, and determine your overall compliance against the configurations specified in your internal guidelines. With AWS Config, you can simplify compliance auditing, security analysis, change management, and operational troubleshooting.</span></p><p><span>In this task, you activate AWS Config rules to ensure compliance of tagging and Amazon Elastic Block Store (Amazon EBS) volumes.</span></p><ol start="85"><li><p><span>On the </span><span id="ssb_services"><span>Services </span><i class="fas fa-angle-down"></i></span><span> menu, choose </span><strong><span>Config</span></strong><span>.</span></p></li><li><p><span>If a </span><strong><span>Get started</span></strong><span> button appears, do the following:</span></p><ul><li><p><span>Choose </span><span id="ssb_orange"><span>Get started</span></span></p></li><li><p><span>Choose </span><span id="ssb_orange"><span>Next</span></span><span> </span></p></li><li><p><span>Choose </span><span id="ssb_orange"><span>Next</span></span></p></li><li><p><span>Choose </span><span id="ssb_orange"><span>Confirm</span></span></p></li></ul><p><span>This configures AWS Config for initial use. A </span><strong><span>Welcome to AWS Config</span></strong><span> window pops up. You can close it.</span></p></li><li><p><span>In the left navigation pane, choose </span><strong><span>Rules</span></strong><span> (the one toward the top).</span></p></li><li><p><span>Choose </span><span id="ssb_orange"><span> Add rule</span></span></p></li><li><p><span>In the </span><strong><span>AWS Managed Rules</span></strong><span> section in the search field, enter </span><code>required-tags</code></p></li><li><p><span>Select the button next to </span><strong><span>required-tags</span></strong><span>.</span></p></li><li><p><span>Choose </span><span id="ssb_orange"><span>Next</span></span></p><p><span>You configure the rule to require a project code for each resource.</span></p></li><li><p><span>In the </span><strong><span>Configure rule</span></strong><span> page, scroll to </span><strong><span>Parameters</span></strong><span>, and configure the following settings:</span></p><ul><li><p><span>To the right of </span><strong><span>tag1Key</span></strong><span>, enter </span><code>project</code><span> (replace any existing value).</span></p></li><li><p><span>Choose </span><span id="ssb_orange"><span>Next</span></span><span> (at the bottom of the page).</span></p></li><li><p><span>Choose </span><span id="ssb_orange"><span>Add rule</span></span><span> </span></p></li></ul><p><span>This rule now looks for resources that do not have a </span><strong><span>project</span></strong><span> tag. This takes a few minutes to complete, so continue with the next steps. You do not need to wait.</span></p><p><span>You now add a rule that looks for EBS volumes that are not attached to EC2 instances.</span></p></li><li><p><span>Choose </span><span id="ssb_orange"><span>Add rule</span></span><span> </span></p></li><li><p><span>In the </span><strong><span>AWS Managed Rules</span></strong><span> section in the search field, enter </span><code>ec2-volume-inuse-check</code></p></li><li><p><span>Select the button next to </span><strong><span>ec2-volume-inuse-check</span></strong><span>.</span></p></li><li><p><span>Choose </span><span id="ssb_orange"><span>Next</span></span></p></li><li><p><span>Choose </span><span id="ssb_orange"><span>Next</span></span><span> again.</span></p></li><li><p><span>Choose </span><span id="ssb_orange"><span>Add rule</span></span><span> </span></p></li><li><p><span>Wait until at least one of the rules has completed evaluation. Refresh your browser page if necessary.</span></p><p><i class="fas fa-comment"></i><span> If you receive a message that there are </span><strong><span>No resources in scope</span></strong><span>, wait a few minutes longer. This message is an indication that AWS Config is still scanning available resources. The message eventually disappears.</span></p></li><li><p><span>Choose each of the rules to view the result of the audits. </span></p></li><li><p><span>Under </span><i class="fas fa-caret-right"></i><strong><span>Resources in scope</span></strong><span> select </span><strong><span>Compliant</span></strong><span> from the list.</span></p><p><span>The following should be among the results:</span></p><ul><li><p><strong><span>required-tags:</span></strong><span> A compliant EC2 instance (because the Web Server has a </span><strong><span>project</span></strong><span> tag) and many non-compliant resources that do not have a </span><strong><span>project</span></strong><span> tag</span></p></li><li><p><strong><span>ec2-volume-inuse-check:</span></strong><span> One compliant volume (attached to an instance) and one non-compliant volume (not attached to an instance)</span></p></li></ul><p><span>AWS Config has a large library of pre-defined compliance checks, and you can create additional checks by writing your own AWS Config rule using Lambda.</span></p></li></ol><p>&nbsp;</p><h2 id="lab-complete"><span>Lab complete</span></h2><p><i class="icon-flag-checkered"></i><span> Congratulations! You have completed the lab.</span></p><ol start="102"><li><p><span>Choose </span><span id="ssb_voc_grey"><span>End Lab</span></span><span> at the top of this page, and then choose </span><span id="ssb_blue"><span>Yes</span></span><span> to confirm that you want to end the lab.  </span></p></li></ol><p><span>A panel appears indicating that </span><strong><span>DELETE has been initiated... You may close this message box now.</span></strong></p><ol start="103"><li><p><span>Choose the </span><strong><span>X</span></strong><span> in the top-right corner to close the panel.</span></p></li></ol><p>&nbsp;</p><h2 id="additional-resources"><span>Additional resources</span></h2><p><span>For more information about AWS Training and Certification, see </span><a href="https://aws.amazon.com/training/" target="_blank" class="url" rel="noopener noreferrer">https://aws.amazon.com/training/</a><span>.</span></p><p><em><span>Your feedback is welcome and appreciated.</span></em></p><p><span>If you would like to share any suggestions or corrections, please provide the details in our </span><a href="https://support.aws.amazon.com/#/contacts/aws-training" target="_blank" rel="noopener noreferrer"><span>AWS Training and Certification Contact Form</span></a><span>.</span></p><p><em><span>© 2022 Amazon Web Services, Inc. and its affiliates. All rights reserved. This work may not be reproduced or redistributed, in whole or in part, without prior written permission from Amazon Web Services, Inc. Commercial copying, lending, or selling is prohibited.</span></em></p></div></div>
+<script defer="defer" src="vedd3670a3b1c4e178fdfb0cc912d969e1713874337387" integrity="sha512-EzCudv2gYygrCcVhu65FkAxclf3mYM6BCwiGUm6BEuLzSb5ulVhgokzCZED7yMIkzYVg65mxfIBNdNra5ZFNyQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;88554ab33f919454&quot;,&quot;version&quot;:&quot;2024.4.1&quot;,&quot;token&quot;:&quot;a73834a4a1444e9ab89e8da06da41720&quot;}" crossorigin="anonymous"></script>
+
+</body></html>

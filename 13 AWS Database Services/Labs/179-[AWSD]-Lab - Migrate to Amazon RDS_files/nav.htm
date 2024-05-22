@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Labs - Vocareum</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- JQuery -->
+    <!-- Note: Also used for dataTable objects -->
+    <script type="text/javascript" src="nav_data/jquery-3.6.3.min.js"></script>
+    <!-- <script src="../shared/ace/assets/js/jquery-ui-1.10.3.custom.min.js"></script> -->
+    <script src="jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="jquery-ui.min.css">
+
+    <link rel="stylesheet" href="nav_data/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="nav_data/font-awesome.css"> <!-- version 3.2.1 -->
+    <!-- bootstrap.bundle.js includes Popper library, for dropdown menus etc. -->
+    <script src="nav_data/bootstrap.bundle.js"></script>
+    <!-- Bootbox, requires Popper library (included above with B5) -->
+    <script type="text/javascript" src="nav_data/bootbox-6.0.js"></script>
+    
+
+    <!-- datepicker must come after Jquery -->
+    <script src="nav_data/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="nav_data/bootstrap-datepicker3.min.css" integrity="sha512-rxThY3LYIfYsVCWPCW9dB0k+e3RZB39f23ylUYTEuZMDrN/vRqLdaCBo/FbvVT6uC2r0ObfPzotsfKF9Qc5W5g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <script src="jquery.validate.min.js"></script>
+    <script src="additional-methods.min.js"></script>
+
+    <!-- Switch to Select2 rc1, major bug fix to Chrome+Mac multiple select performance. Eventually replace with stable version. -->
+    <link href="nav_data/select2.min.css" rel="stylesheet">
+    <script src="nav_data/select2.min.js"></script>
+    <link rel="stylesheet" href="nav_data/select2-bootstrap-5-theme.min.css">
+
+
+    <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+    </style>
+
+    <script src="nav_data/js.cookie.min.js" integrity="sha256-0H3Nuz3aug3afVbUlsu12Puxva3CP4EhJtPExqs54Vg=" crossorigin="anonymous"></script>
+
+    <!-- Vocareum JS Funcs -->
+    <script type="text/javascript" src="jsfuncs.js"></script>
+
+    <!-- Load sitewide icons CSS from file: Flaticons UIcons -->
+    <!-- 
+        To use an icon, look up available icons "Flaticons UIcons
+        example: <i class="fi fi-sr-camera"></i>
+        The "rr" is regular-rounded. Replace with "br" for bold-rounded, and "sr" for solid-rounded
+    -->
+    <link rel="stylesheet" href="uicons-regular-rounded.css">
+    <!-- <link type="text/css" href="../shared/flaticons/uicons-regular-rounded/css/uicons-regular-rounded.css" rel="stylesheet"> -->
+    <link type="text/css" href="uicons-bold-rounded.css" rel="stylesheet">
+    <link type="text/css" href="uicons-solid-rounded.css" rel="stylesheet">
+
+    <!-- Load Vocareum styled CSS from file -->
+    <link rel="stylesheet" type="text/css" href="nav_data/voc_nav.css">
+
+</head>
+
+<body id="page_body">
+
+    <!-- placeholder
+    <div id="opennewtab" class="alert alert-block alert-warning hidden" role="alert">
+        <p><b>It seems that third-party cookies are disabled in your browser, preventing Vocareum from being iframed. Please click this button to open Vocareum in a new tab.</b></p>
+        <br/>
+        <button type='button' onclick='makePostRequestInNewTab()' 
+            style='cursor: pointer; background-color: #394B58;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;'>
+            Open in a New Tab
+        </button>
+    </div>
+    -->
+    
+    <script type="text/javascript">
+      function escapeHtml(unsafe) {
+        return unsafe
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;")
+          .replace(/'/g, "&#039;");
+      }
+
+      var postUrlCall = '';
+
+      function makePostRequestInNewTab() {
+          postToUrlInNewTab(postUrlCall, '81c1ffa7f4b9f31693ed9896bd3bf74266f79b9379b64ca7eb4ed3e3b43034aa');
+      }
+
+      /*
+      //if 3rd party cookies are disabled - give an option to open in a new tab
+      if (self !== top && !areCookiesEnabled()) {
+          postUrlCall = window.location.href;
+          window.stop();
+          removeSpinner();
+          $('#opennewtab').removeClass("hidden");
+      }
+      */
+
+      
+      /* for CSRF tokens */
+      /* NOTE: ajaxPreFilter works better than the ajaxSetup where ajax happens when form.serialize is called */
+      var csrfToken = "81c1ffa7f4b9f31693ed9896bd3bf74266f79b9379b64ca7eb4ed3e3b43034aa";
+      $.ajaxPrefilter(function (options, originalData, xhr) {
+        if (options.data) {
+          if (options.data instanceof FormData) {
+            //let the form send the vockey
+          } else {
+            try {
+              pdata = JSON.parse(options.data);
+              pdata['vockey'] = csrfToken;
+              options.data = JSON.stringify(pdata);
+            } catch (e) {
+              options.data += "&vockey=" + csrfToken;
+            }
+          }
+        } else {
+          options.data = "vockey=" + csrfToken;
+        }
+      });
+
+      function refreshNewSessionPage() {
+        var url = window.location.href;
+        var msg = 'Redirected+to+newly+logged+in+session.+Please+retry+the+operation';
+        if (url.indexOf('?') > -1) {
+          url += '&w=' + msg;
+        } else {
+          url += '?w=' + msg;
+        }
+        window.location.href = url;
+      }
+    </script>
+
+    <style>
+        .voc-navbar {
+            padding-top: 0.3rem;
+            padding-bottom: 0.3rem;
+        }
+
+        /* reduce the navbar thickness to match old navbar */
+        .voc-navbar-font {
+            font-size: 0.82rem;
+        }
+        .voc-navbar-dropitem {
+            font-size: 0.9rem;
+        }
+        .nav-section-header {
+            color: black;
+            background-color: #ecf2f7;
+            text-align: center;
+        }
+        #nav_manage_search_div {
+            width: 90%;
+            margin: auto;
+        }
+
+    </style>
+
+    <nav id="voc_navbar" class="d-none navbar voc-navbar sticky-top navbar-expand-lg navbar-dark voc-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand voc-navbar-font" href="https://labs.vocareum.com/main/main.php" aria-label="Home Page">
+                <img src="nav_data/vocareum-logo-white.svg" alt="Vocareum" width="140">
+            </a>
+            <button class="navbar-toggler voc-navbar-font" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="justify-content-end collapse navbar-collapse voc-navbar-color" id="navbarNavDropdown">
+                <ul class="navbar-nav voc-navbar-font">
+                    <li class="nav-item navbar-font">
+                        <a class="nav-link active text-white text-white" href="https://labs.vocareum.com/main/main.php?m=dashboard" aria-label="Home">
+                            <i class="fi fi-rr-home"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item navbar-font dropdown ">
+                        <a class="nav-link text-white dropdown-toggle" id="nav_classesDropdown" role="button" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fi fi-rr-book-open-cover"></i>
+                            Classes
+                        </a>
+                        <ul id="nav_classes_list" class="dropdown-menu" aria-labelledby="nav_classesDropdown">
+                                <li class="nav-item d-inline">
+        <div class="voc-navbar-dropitem dropdown-item">
+            
+            <a title="AWS  re/Start v3.8.1-2952-a0RKY0000009aSl2AI" class="text-dark text-decoration-none" href="https://labs.vocareum.com/main/main.php?m=course&amp;code=vc_2_0_ddb5d0bborg270_163">
+                AWS  re/Start v3.8.1-2952-a0RK..
+            </a>
+        </div>
+    </li>                        </ul>
+                    </li>
+                    <li class="nav-item navbar-font dropdown d-none">
+                        <a class="nav-link text-white dropdown-toggle" id="nav_manageDropdown" role="button" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fi fi-rr-id-badge"></i>
+                            Manage
+                        </a>
+                        <ul id="nav_manage_list" class="dropdown-menu" aria-labelledby="nav_manageDropdown">
+                            <li class="nav-item"><a class="voc-navbar-dropitem dropdown-item" href="#">No Courses Found</a></li>                            
+                                                    </ul>
+                    </li>
+                    <li class="nav-item navbar-font d-none">
+                        <a class="nav-link text-white" href="https://labs.vocareum.com/main/main.php?m=grader">
+                            <i class="fi fi-rr-star"></i>
+                            Grade
+                        </a>
+                    </li>
+                    <li class="nav-item navbar-font d-none">
+                        <a class="nav-link text-white" href="https://labs.vocareum.com/main/main.php?m=mybook">
+                            <i class="fi fi-rr-mobile"></i>
+                            My Library
+                        </a>
+                    </li>
+                    <li class="nav-item navbar-font">
+                        <a class="nav-link text-white" href="https://intercom.help/vocareum">
+                            <i class="fi fi-rr-comments-question-check"></i>
+                            Help
+                        </a>
+                    </li>
+                    <li class="nav-item navbar-font d-none">
+                        <a class="nav-link text-white" href="https://labs.vocareum.com/main/nav.php?m=inbox">
+                            <i class="fi fi-rr-envelope"></i>
+                            Inbox
+                        </a>
+                    </li>
+                    <li class="nav-item navbar-font dropdown">
+                        <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fi fi-rr-user"></i>
+                            EMMANUEL ARHU                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end voc-navbar-font pt-0">
+                            
+                            
+                            <section class="nav-dropdown-section" role="contentinfo" aria-label="AWS">
+                                <li class="nav-section-header" aria-hidden="true">
+                                    AWS
+                                </li>
+    
+                                    
+                                    
+                                    
+                                    
+                                                            </section>
+
+                            <section class="nav-dropdown-section" role="contentinfo" aria-label="Org Management">
+                                <li class="nav-section-header" aria-hidden="true">
+                                    Org
+                                </li>
+                                
+                                                                        
+                                                                        
+                                            </section>
+
+                            <section class="nav-dropdown-section" role="contentinfo" aria-label="Cluster Management">
+                                <li class="nav-section-header" aria-hidden="true">
+                                    Clusters
+                                </li>
+    
+                                    
+                                                            </section>
+
+                            <section class="nav-dropdown-section" role="contentinfo" aria-label="Support">
+                                <li class="nav-section-header" aria-hidden="true">
+                                    Support
+                                </li>
+
+                                                                        
+                                                                        
+                                                                        
+    </section>
+
+                            <section class="nav-dropdown-section" role="contentinfo" aria-label="Account">
+                                <li id="account_section_bar" class="nav-section-header" aria-hidden="true">
+                                    <!-- &horbar;&horbar;&horbar; -->
+                                    <hr>
+                                </li>
+    
+                                    
+                                                                    <li>
+                                        <a class="voc-navbar-dropitem dropdown-item" href="https://labs.vocareum.com/main/nav.php?m=account_new">
+                                            <i class="icon-cogs"></i>
+                                            Settings
+                                        </a>
+                                    </li>
+                                                                <li>
+                                    <a class="voc-navbar-dropitem dropdown-item" href="https://labs.vocareum.com/main/logout.php">
+                                        <i class="icon-off"></i>
+                                        Logout
+                                    </a>
+                                </li>
+                            </section>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ----------------------------- # ----------------------------- -->
+    <!--              Empty Popup Notification Container               -->
+    <!-- ----------------------------- # ----------------------------- -->
+    <div id="toast_container" class="toast-container position-fixed bottom-0 end-0 m-4">
+        <!-- NOTE: If you'd like to change the position of notifications
+            for your specific page, please use JS on your page to modify
+            the "bottom-0" and "end-0" bootstrap 5 classes respectively.
+        -->
+    </div>
+
+
+    <!-- ----------------------------- # ----------------------------- -->
+    <!--                       Maintenance Banner                      -->
+    <!-- ----------------------------- # ----------------------------- -->
+    
+    <!-- ----------------------------- # ----------------------------- -->
+    <!--                      Success / Error Banner                   -->
+    <!-- ----------------------------- # ----------------------------- -->
+    
+    
+        
+
+
+
+
+    <!-- ----------------------------- # ----------------------------- -->
+    <!--                          PAGE CONTENT                         -->
+    <!-- ----------------------------- # ----------------------------- -->
+    ERROR: You are not an instructor for this course. If you believe
+        this is an error, please contact Vocareum Support.<script defer="defer" src="vedd3670a3b1c4e178fdfb0cc912d969e1713874337387" integrity="sha512-EzCudv2gYygrCcVhu65FkAxclf3mYM6BCwiGUm6BEuLzSb5ulVhgokzCZED7yMIkzYVg65mxfIBNdNra5ZFNyQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;88553afdbb727773&quot;,&quot;version&quot;:&quot;2024.4.1&quot;,&quot;token&quot;:&quot;a73834a4a1444e9ab89e8da06da41720&quot;}" crossorigin="anonymous"></script>
+</body></html>
