@@ -48,6 +48,7 @@ This folder contains materials and resources related to the Cloud Foundation mod
   - **Labs/**
     - **Lab1/**
       - `Lab1.html`
+      - `Lab1.pdf`(Lab in pdf format)
       - **Lab1-Files/**
         - `index.html`
         - `style.css`
@@ -78,6 +79,7 @@ The PDFs are documents that provide additional information and resources related
 
 The Labs folder is organized by individual lab exercises, and has its own subfolder which contains the following:
 - A `README.html` file that contains instructions for completing the lab.
+- A `Lab.pdf` file that contains instructions for completing the lab.
 - A  web development files such as HTML, CSS, JavaScript, and images needed for the lab.
 
 Each lab folder follows a similar structure, providing all necessary files to complete the lab activities.
