@@ -34,7 +34,8 @@ Within each module, you'll find the following folders:
 ```markdown
 ## 01 Cloud Foundation
 
-This folder contains materials and resources related to the Cloud Foundation module. Below is an overview of the structure and contents of this folder.
+This folder contains materials and resources related to the Cloud Foundation module.
+Below is an overview of the structure and contents of this folder.
 
 ## Folder Structure
 
